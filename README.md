@@ -26,8 +26,8 @@ assets/js/site.js          Arcade interactive, navigation, séquences, FAQ, comp
 assets/img/                Visuels
 sitemap.xml, robots.txt    Générés par build.py
 favicon.ico                Favicon 16/32/48, sondé à la racine par les navigateurs
-apple-touch-icon.png       Icône iOS 180×180, fond blanc (iOS noircit la transparence)
-assets/img/favicon-*.png   Favicons PNG 16 et 32 px
+apple-touch-icon.png       Icône iOS 180×180, fond marine (iOS noircit la transparence)
+favicon-16.png, favicon-32.png  Favicons PNG (à la racine : /assets/ est mis en cache un an)
 ```
 
 **L'accueil est la maquette Claude Design reprise telle quelle** : styles en ligne,
