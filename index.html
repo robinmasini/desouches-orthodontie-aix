@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orthodontiste à Aix-en-Provence — Dr Renaud Desouches</title>
+<meta name="description" content="Cabinet d’orthodontie à Aix-en-Provence spécialisé dans les traitements par aligneurs transparents, pour les enfants, les adolescents et les adultes.">
+<link rel="canonical" href="https://desouches-orthodontie-aix.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Dr Renaud Desouches — Orthodontiste à Aix-en-Provence">
+<meta property="og:description" content="Une orthodontie moderne, principalement par aligneurs, pour les enfants, les adolescents et les adultes.">
+<meta property="og:url" content="https://desouches-orthodontie-aix.com/">
+<meta property="og:image" content="https://desouches-orthodontie-aix.com/assets/img/dr-desouches-1200.webp">
+<meta name="theme-color" content="#FBFCFD">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 22C6 12 10 7 16 7s10 5 10 15' fill='none' stroke='%230A1F3C' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FBFCFD; -webkit-font-smoothing: antialiased; }
+  a { color: #0A1F3C; text-decoration: none; }
+  a:hover { color: #2E63A8; }
+  summary { list-style: none; cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+  ::selection { background: #0A1F3C; color: #fff; }
+  @keyframes rise { from { opacity: 0; transform: translateY(46px); } to { opacity: 1; transform: none; } }
+  @keyframes riseSm { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes zoomOut { from { transform: scale(1.14); } to { transform: scale(1); } }
+  @keyframes parUp { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--par, 110px))); } }
+  @keyframes parDown { from { transform: translateY(0); } to { transform: translateY(calc(.7 * var(--par, 110px))); } }
+  @keyframes parTilt { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(calc(-1.3 * var(--par, 110px))) rotate(-4deg); } }
+  @keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes floaty { 0% { transform: translateY(0); } 50% { transform: translateY(-13px); } 100% { transform: translateY(0); } }
+  @keyframes floatySlow { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes sheen { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(220%) skewX(-18deg); } }
+  @keyframes spinSlow { to { transform: rotate(360deg); } }
+  @keyframes driftAcross {
+    0%   { translate: 0 0; scale: 1; opacity: .5; }
+    36%  { translate: -34vw 18vh; scale: 1.04; opacity: .5; }
+    68%  { translate: -2vw 38vh; scale: 1.12; opacity: .55; }
+    86%  { translate: 12vw 44vh; scale: 1.2; opacity: .5; }
+    100% { translate: 12vw 44vh; scale: 1.2; opacity: 0; }
+  }
+  @keyframes turnScroll {
+    0%   { transform: rotateX(18deg) rotateY(-40deg); }
+    28%  { transform: rotateX(18deg) rotateY(40deg); }
+    56%  { transform: rotateX(18deg) rotateY(-40deg); }
+    88%  { transform: rotateX(6deg) rotateY(0deg); }
+    100% { transform: rotateX(6deg) rotateY(0deg); }
+  }
+  @keyframes wobbleZ { 0% { rotate: -4deg; } 50% { rotate: 5deg; } 100% { rotate: -4deg; } }
+  @keyframes swing3d {
+    0%   { transform: rotateX(20deg) rotateZ(-8deg) rotateY(-34deg); }
+    50%  { transform: rotateX(20deg) rotateZ(-8deg) rotateY(34deg); }
+    100% { transform: rotateX(20deg) rotateZ(-8deg) rotateY(-34deg); }
+  }
+  @keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+</style>
+<style>
+@media (max-width: 980px) {
+  [data-hero] { grid-template-columns: 1fr !important; }
+  [data-hero-text] { grid-area: auto !important; order: 1; }
+  [data-hero-media] { grid-area: auto !important; order: 2; min-height: 0 !important; margin-top: 8px; }
+  [data-hero-stats] { grid-area: auto !important; order: 3; position: relative; z-index: 5; margin-top: 34px !important; gap: 18px !important; flex-wrap: wrap; }
+  [data-hero-rest] { grid-area: auto !important; order: 4; }
+  [data-hero-glow] { display: none !important; }
+  [data-hero-media] > img { margin: -30px auto 0 !important; max-width: 480px !important; transform: translateX(-7%) !important; }
+  [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
+  [data-social-wrap] { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: -18px; }
+  [data-social-wrap] { grid-template-rows: auto auto auto; }
+  [data-social]:nth-child(1) { grid-column: 1 / -1; grid-row: 1; }
+  [data-social]:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+  [data-social]:nth-child(3) { grid-column: 1; grid-row: 3; }
+  [data-social]:nth-child(4) { grid-column: 2; grid-row: 3; }
+  [data-social]:nth-child(1), [data-social]:nth-child(2) { padding: 18px 20px !important; }
+  [data-social]:nth-child(1) > div:first-child, [data-social]:nth-child(2) > div:first-child { gap: 16px !important; }
+  [data-social]:nth-child(1) > div:first-child > div:not([style*="margin-left"]), [data-social]:nth-child(2) > div:first-child > div { flex: 1 1 auto; }
+  [data-social]:nth-child(1) img, [data-social]:nth-child(2) img { height: 52px !important; }
+  [data-social]:nth-child(1) p, [data-social]:nth-child(2) p { margin-top: 10px !important; }
+  [data-social]:nth-child(1) a { margin-top: 12px !important; }
+  [data-social] div[style*="nowrap"] { font-size: 13px !important; }
+  [data-social] { position: static !important; inset: auto !important; width: auto !important; z-index: auto !important; animation: none !important; padding: 14px 16px !important; box-shadow: 0 12px 26px -20px rgba(10,31,60,.4), inset 0 1px 0 rgba(255,255,255,.9) !important; }
+  [data-social] p { font-size: 12.5px !important; }
+}
+</style>
+</head>
+<body>
+<div style="--par: 130px; --glass: 28px; position: relative; width: 100%; overflow-x: clip; background: #FBFCFD; color: #0A1F3C; font-family: Barlow, system-ui, sans-serif; font-weight: 400; letter-spacing: -0.01em; text-wrap: pretty;">
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 90; background: rgba(10,31,60,.06);">
+    <div style="height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, #0A1F3C, #2E63A8, #7FA6D9); animation: progress 1s linear both; animation-timeline: scroll(root);"></div>
+  </div>
+
+  <!-- ambient background -->
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background:
+      radial-gradient(900px 620px at 78% -8%, rgba(127,166,217,.30), transparent 62%),
+      radial-gradient(760px 560px at 4% 22%, rgba(46,99,168,.14), transparent 64%),
+      radial-gradient(1000px 700px at 50% 108%, rgba(10,31,60,.10), transparent 60%);"></div>
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .5; background-image: repeating-linear-gradient(90deg, rgba(10,31,60,.055) 0 1px, transparent 1px 116px), repeating-linear-gradient(0deg, rgba(10,31,60,.035) 0 1px, transparent 1px 116px); mask-image: radial-gradient(1200px 900px at 50% 20%, #000, transparent 78%);"></div>
+
+  <!-- gouttière that follows the scroll -->
+  <div style="position: fixed; z-index: 0; top: 62px; right: 19%; width: 350px; max-width: 34vw; rotate: -3deg; pointer-events: none; animation: driftAcross 1s linear both; animation-timeline: scroll(root);">
+    <div style="perspective: 1200px;">
+      <div style="transform-origin: 50% 50%; animation: turnScroll 1s linear both; animation-timeline: scroll(root);">
+        <img src="assets/img/gouttiere.webp" alt="" style="display: block; width: 100%; filter: drop-shadow(0 24px 40px rgba(10,31,60,.14));" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <div style="position: fixed; top: 22px; left: 0; right: 0; z-index: 80; display: flex; justify-content: center; padding: 0 24px;">
+    <div style="width: 100%; max-width: 1240px; display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); padding: 12px 12px 12px 26px; overflow: hidden; background: linear-gradient(140deg, rgba(255,255,255,.80), rgba(255,255,255,.52)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 20px 50px -24px rgba(10,31,60,.30), inset 0 1px 0 rgba(255,255,255,.95);">
+      <a href="index.html" style="display: flex; align-items: baseline; gap: 10px; margin-right: auto; flex: none; white-space: nowrap;">
+        <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 25px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; flex: none;">Dr. DESOUCHES</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: clamp(13px, 1.7vw, 26px); flex: none; white-space: nowrap; font-size: 13.5px; font-weight: 500; color: #33455F;">
+        <a href="ortho-mind.html" style="color: inherit;">OrthoMind</a>
+        <a href="aligneurs.html" style="color: inherit;">Traitements</a>
+        <a href="dr-renaud-desouches.html" style="color: inherit;">L'équipe</a>
+        <a href="cabinet-aix-en-provence.html" style="color: inherit;">Le cabinet</a>
+        <a href="rendez-vous.html" style="color: inherit;">Rendez‑vous</a>
+      </div>
+      <a href="rendez-vous.html" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; padding: 14px 24px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 13.5px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 16px 34px -16px rgba(10,31,60,.6), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="box-shadow: 0 22px 42px -14px rgba(10,31,60,.72), inset 0 1px 0 rgba(255,255,255,.3); transform: translateY(-1px);">
+        <span style="color: #fff;">Ma téléconsultation</span>
+        <span style="width: 6px; height: 6px; border-radius: 999px; background: #7FA6D9; box-shadow: 0 0 10px #7FA6D9;"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <div id="top" style="position: relative; z-index: 1; min-height: 100vh; padding: 168px 24px 120px; display: flex; justify-content: center;">
+
+    <div data-hero="" style="position: relative; width: 100%; max-width: 1240px; display: grid; grid-template-columns: 1.02fr .98fr; column-gap: 48px; row-gap: 0; align-content: center;">
+
+      <div data-hero-text="" style="grid-column: 1; grid-row: 1; animation: parUp 1s linear both; animation-timeline: view(); animation-range: cover 12% cover 100%;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px 9px 12px; border-radius: 999px; background: rgba(255,255,255,.6); backdrop-filter: blur(18px) saturate(180%); -webkit-backdrop-filter: blur(18px) saturate(180%); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 10px 26px -16px rgba(10,31,60,.4); animation: riseSm .7s cubic-bezier(.16,1,.3,1) both;">
+          <span style="width: 7px; height: 7px; border-radius: 999px; background: #2E63A8; box-shadow: 0 0 0 4px rgba(46,99,168,.16);"></span>
+          <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #33455F;">Chirurgien‑dentiste orthodontiste qualifié</span>
+        </div>
+
+        <h1 style="margin: 26px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(46px, 5.7vw, 84px); line-height: .96; letter-spacing: -0.03em; color: #0A1F3C; animation: rise .9s cubic-bezier(.16,1,.3,1) both;">
+          L'orthodontie<br />
+          <span style="font-style: italic; color: #2E63A8;">de précision</span>, <br />sans compromis.
+        </h1>
+      </div>
+
+      <div data-hero-rest="" style="grid-column: 1; grid-row: 2;">
+        <p style="margin: 30px 0 0; max-width: 470px; font-size: 17.5px; line-height: 1.62; color: #465873; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .08s;">
+          Cabinet d'orthodontie &amp; production de gouttières à Aix‑en‑Provence. Aligneurs transparents, appareils esthétiques et suivi numérique continu&nbsp;— pour les adultes exigeants comme pour les sourires qui grandissent.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .16s;">
+          <a href="rendez-vous.html" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 19px 30px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 15px; font-weight: 600; box-shadow: 0 26px 50px -22px rgba(10,31,60,.75), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="transform: translateY(-2px); box-shadow: 0 32px 60px -20px rgba(10,31,60,.85), inset 0 1px 0 rgba(255,255,255,.3);">
+            <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span>
+            <span style="color: rgba(255,255,255,.55); font-size: 18px; line-height: 1;">→</span>
+          </a>
+          <a href="https://www.doctolib.fr/orthodontiste/aix-en-provence/renaud-desouches" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 19px 28px; border-radius: 999px; background: rgba(255,255,255,.62); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,.92); color: #14304F; font-size: 15px; font-weight: 600; box-shadow: 0 18px 40px -22px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,.95);" style-hover="background: rgba(255,255,255,.85); transform: translateY(-2px);">
+            Prendre rendez‑vous au cabinet
+          </a>
+        </div>
+      </div>
+
+      <div data-hero-stats="" style="grid-column: 1; grid-row: 3; display: flex; gap: 40px; margin-top: 56px; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .24s;">
+          <div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 38px; line-height: 1;">1 800+</div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96; margin-top: 8px;">Sourires traités</div>
+          </div>
+          <div style="width: 1px; background: linear-gradient(180deg, transparent, rgba(10,31,60,.16), transparent);"></div>
+          <div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 38px; line-height: 1;">4,9<span style="font-size: 20px; color: #6B7C96;">/5</span></div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96; margin-top: 8px;">Avis patients</div>
+          </div>
+          <div style="width: 1px; background: linear-gradient(180deg, transparent, rgba(10,31,60,.16), transparent);"></div>
+          <div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 38px; line-height: 1;">24 h</div>
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96; margin-top: 8px;">Réponse OrthoMind</div>
+          </div>
+      </div>
+
+      <!-- cut-out portrait at first plane + floating glass -->
+      <div data-hero-media="" style="grid-column: 2; grid-row: 1 / 4; align-self: center; position: relative; min-height: 620px; animation: parDown 1s linear both; animation-timeline: view(); animation-range: cover 12% cover 100%;">
+        <div data-hero-glow="" style="position: absolute; left: 50%; top: 46%; width: 108%; aspect-ratio: 1 / 1; transform: translate(-50%, -50%); border-radius: 999px; background: radial-gradient(circle, rgba(255,255,255,.95) 18%, rgba(127,166,217,.34) 52%, rgba(127,166,217,0) 74%); pointer-events: none;"></div>
+
+        <img src="assets/img/dr-desouches-1200.webp" alt="Dr Desouches, orthodontiste à Aix-en-Provence" style="position: relative; z-index: 3; display: block; width: 100%; max-width: 700px; margin: -120px auto 0 -48px; mask-image: linear-gradient(180deg, #000 46%, rgba(0,0,0,.75) 66%, rgba(0,0,0,.32) 84%, transparent 97%); -webkit-mask-image: linear-gradient(180deg, #000 46%, rgba(0,0,0,.75) 66%, rgba(0,0,0,.32) 84%, transparent 97%); filter: drop-shadow(0 46px 60px rgba(10,31,60,.30)); animation: rise 1.1s cubic-bezier(.16,1,.3,1) both;" />
+
+        <div data-social-wrap="" style="display: contents;">
+        <!-- OrthoMind card -->
+        <div data-social="" style="position: absolute; z-index: 4; left: clamp(-76px, calc(1288px - 100vw), 0px); top: 22%; width: 316px; padding: 20px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.86), rgba(224,236,250,.56)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -26px rgba(20,66,130,.55), 0 0 60px -18px rgba(127,166,217,.7), inset 0 1px 0 rgba(255,255,255,1); animation: floatySlow 8s ease-in-out infinite;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/img/orthomind-lockup.webp" alt="OrthoMind" style="height: 46px; width: auto; flex: none; object-fit: contain;" />
+            <div>
+              <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em;">OrthoMind</div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; line-height: 1.3; letter-spacing: .16em; text-transform: uppercase; color: #2E63A8;">Auto‑télé‑<br />consultation</div>
+            </div>
+            <div style="margin-left: auto; width: 8px; height: 8px; border-radius: 999px; background: #2ED09A; box-shadow: 0 0 0 5px rgba(46,208,154,.18);"></div>
+          </div>
+          <div style="display: flex; margin-top: 14px;">
+            <span style="display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(46,208,154,.12); border: 1px solid rgba(46,208,154,.42); font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: #0E7A5A; white-space: nowrap;">
+              <span style="width: 5px; height: 5px; border-radius: 999px; background: #2ED09A;"></span>Recommandé
+            </span>
+          </div>
+          <p style="margin: 12px 0 0; font-size: 13px; line-height: 1.55; color: #3C4F6B;">Photographiez votre sourire. Votre bilan est vérifié par nos chirurgiens‑dentistes qualifié(e)s.</p>
+          <a href="rendez-vous.html" style="display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 12px 16px; border-radius: 6px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 12.5px; font-weight: 600; white-space: nowrap;" style-hover="transform: translateY(-1px);">
+            <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span><span style="color: rgba(255,255,255,.5);">→</span>
+          </a>
+        </div>
+
+        <!-- CasperDental card -->
+        <div data-social="" style="position: absolute; z-index: 4; left: clamp(-16px, calc(1288px - 100vw), 24px); bottom: 3%; width: 288px; padding: 18px 20px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.86), rgba(255,255,255,.5)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 26px 64px -26px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 7s ease-in-out infinite; animation-delay: -3.5s;">
+          <div style="display: flex; align-items: center; gap: 13px;">
+            <img src="assets/img/casper.webp" alt="CasperDental" style="height: 44px; width: auto; flex: none; object-fit: contain;" />
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; line-height: 1.3; letter-spacing: .16em; text-transform: uppercase; color: #2E63A8;">Gouttières orthodontiques invisibles</div>
+          </div>
+          <p style="margin: 13px 0 0; font-size: 13px; line-height: 1.55; color: #3C4F6B;">Kit complet pour faciliter l'entretien et l'utilisation de vos aligneurs.</p>
+        </div>
+        <!-- Instagram card -->
+        <div data-social="" style="position: absolute; z-index: 4; right: clamp(-30px, calc(1288px - 100vw), 0px); bottom: 11%; width: 244px; padding: 16px 18px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.86), rgba(255,255,255,.5)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 24px 60px -24px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 6.5s ease-in-out infinite;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/img/instagram.webp" alt="Instagram" style="width: 36px; height: 36px; flex: none; object-fit: contain;" />
+            <div style="min-width: 0;">
+              <div style="font-size: 14.5px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap;">@dr.renauddesouches</div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #2E63A8;">Instagram</div>
+            </div>
+            <span style="margin-left: auto; font-size: 13px; color: #2E63A8;">↗</span>
+          </div>
+          <div style="display: flex; gap: 18px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(10,31,60,.1);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 22px; line-height: 1; letter-spacing: -0.01em;">+10K</div>
+              <div style="margin-top: 3px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96;">Followers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TikTok card -->
+        <div data-social="" style="position: absolute; z-index: 4; right: clamp(-54px, calc(1288px - 100vw), 0px); top: 13%; width: 244px; padding: 16px 18px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.84), rgba(255,255,255,.48)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 24px 60px -24px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 7.5s ease-in-out infinite; animation-delay: -2s;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/img/tiktok.webp" alt="TikTok" style="width: 36px; height: 36px; flex: none; object-fit: contain;" />
+            <div style="min-width: 0;">
+              <div style="font-size: 14.5px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap;">@dr.renauddesouches</div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #2E63A8;">TikTok</div>
+            </div>
+            <span style="margin-left: auto; font-size: 13px; color: #2E63A8;">↗</span>
+          </div>
+          <div style="display: flex; gap: 22px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(10,31,60,.1);">
+            <div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 22px; line-height: 1; letter-spacing: -0.01em;">+25K</div>
+              <div style="margin-top: 3px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96;">Followers</div>
+            </div>
+            <div>
+              <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 22px; line-height: 1; letter-spacing: -0.01em;">+2M</div>
+              <div style="margin-top: 3px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96;">Likes</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MARQUEE ===== -->
+  <div style="position: relative; z-index: 1; padding: 18px 0; border-top: 1px solid rgba(10,31,60,.08); border-bottom: 1px solid rgba(10,31,60,.08); background: rgba(255,255,255,.5); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);">
+    <div style="display: flex; width: max-content; animation: marquee 34s linear infinite;">
+      <div style="display: flex; align-items: center; gap: 46px; padding-right: 46px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #566882;">
+        <span>Aligneurs transparents</span><span style="color: #B9C6D8;">◇</span><span>Orthodontie adulte</span><span style="color: #B9C6D8;">◇</span><span>Enfants &amp; adolescents</span><span style="color: #B9C6D8;">◇</span><span>Scanner intra‑oral 3D</span><span style="color: #B9C6D8;">◇</span><span>Production de gouttières au cabinet</span><span style="color: #B9C6D8;">◇</span><span>OrthoMind</span><span style="color: #B9C6D8;">◇</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 46px; padding-right: 46px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #566882;">
+        <span>Aligneurs transparents</span><span style="color: #B9C6D8;">◇</span><span>Orthodontie adulte</span><span style="color: #B9C6D8;">◇</span><span>Enfants &amp; adolescents</span><span style="color: #B9C6D8;">◇</span><span>Scanner intra‑oral 3D</span><span style="color: #B9C6D8;">◇</span><span>Production de gouttières au cabinet</span><span style="color: #B9C6D8;">◇</span><span>OrthoMind</span><span style="color: #B9C6D8;">◇</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ORTHOMIND ===== -->
+  <div id="orthomind" style="position: relative; z-index: 1; padding: 140px 24px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); gap: 64px; align-items: start;">
+        <div style="position: sticky; top: 132px;">
+          <div style="display: flex; align-items: center; gap: 26px; padding: 14px 0 20px; margin-bottom: 22px; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 70%;">
+            <img src="assets/img/om-mark.webp" alt="" style="display: block; width: 88px; height: auto; flex: none; object-fit: contain;" />
+            <img src="assets/img/om-wordmark.webp" alt="OrthoMind" style="display: block; width: 208px; max-width: 100%; height: auto; object-fit: contain;" />
+          </div>
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #2E63A8; animation: riseSm .8s ease both; animation-timeline: view(); animation-range: entry 0% entry 70%;">01 — Téléconsultation</div>
+          <div style="display: flex; align-items: flex-start; gap: 20px; margin: 18px 0 0; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 75%;">
+            <img src="assets/img/brain.webp" alt="" style="height: 96px; width: auto; flex: none; margin-top: 2px; object-fit: contain; animation: floaty 7s ease-in-out infinite;" />
+            <h2 style="margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(34px, 3.9vw, 56px); line-height: 1.02; letter-spacing: -0.03em;">
+              OrthoMind&nbsp;: votre bilan, <span style="font-style: italic; color: #2E63A8;">vérifié par un praticien.</span>
+            </h2>
+          </div>
+          <p style="margin: 24px 0 0; max-width: 420px; font-size: 16.5px; line-height: 1.65; color: #465873; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .1s; animation-timeline: view(); animation-range: entry 0% entry 80%;">
+            Notre logiciel d'auto‑téléconsultation guide vos prises de vue, analyse votre alignement et transmet le dossier à nos chirurgiens‑dentistes qualifié(e)s. Aucun algorithme ne décide seul&nbsp;: chaque plan est validé humainement.
+          </p>
+          <a href="rendez-vous.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; margin-top: 34px; padding: 18px 28px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 14.5px; font-weight: 600; box-shadow: 0 24px 48px -22px rgba(10,31,60,.7);" style-hover="transform: translateY(-2px);">
+            <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span><span style="color: rgba(255,255,255,.5);">→</span>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="position: relative; overflow: hidden; padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.82), rgba(224,236,250,.5)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 34px 80px -34px rgba(10,31,60,.42), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 65%;">
+            <div style="display: flex; align-items: baseline; gap: 16px;">
+              <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 42px; line-height: 1; color: #B9C6D8;">01</span>
+              <div>
+                <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Vous photographiez</div>
+                <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873; max-width: 460px;">Trois clichés guidés depuis votre téléphone, avec l'écarteur envoyé gratuitement à domicile.</p>
+              </div>
+            </div>
+            <div style="position: absolute; top: 0; bottom: 0; width: 60px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent); animation: sheen 3.4s ease-in-out infinite; animation-delay: 1s; pointer-events: none;"></div>
+          </div>
+
+          <div style="padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.78), rgba(255,255,255,.44)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 34px 80px -34px rgba(10,31,60,.38), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .06s; animation-timeline: view(); animation-range: entry 0% entry 65%;">
+            <div style="display: flex; align-items: baseline; gap: 16px;">
+              <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 42px; line-height: 1; color: #B9C6D8;">02</span>
+              <div>
+                <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Nous analysons</div>
+                <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873; max-width: 460px;">Simulation d'alignement, faisabilité, durée estimée et alternatives thérapeutiques.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.78), rgba(255,255,255,.44)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 34px 80px -34px rgba(10,31,60,.38), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .12s; animation-timeline: view(); animation-range: entry 0% entry 65%;">
+            <div style="display: flex; align-items: baseline; gap: 16px;">
+              <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 42px; line-height: 1; color: #B9C6D8;">03</span>
+              <div>
+                <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Un praticien valide</div>
+                <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873; max-width: 460px;">Votre dossier est signé par un chirurgien‑dentiste qualifié en orthodontie avant toute proposition.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 8px; padding: 26px 30px; border-radius: 10px; background: linear-gradient(140deg, #14304F, #08172C); color: #fff; box-shadow: 0 40px 90px -36px rgba(10,31,60,.8); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .18s; animation-timeline: view(); animation-range: entry 0% entry 65%;">
+            <div style="display: flex; align-items: center; gap: 18px;">
+              <img src="assets/img/om-logo.webp" alt="OrthoMind" style="width: 46px; height: 46px; flex: none; object-fit: contain;" />
+              <div>
+                <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em; color: #fff;">Réponse en moins de 24&nbsp;heures</div>
+                <div style="margin-top: 5px; font-size: 13.5px; color: rgba(255,255,255,.62);">Gratuit et sans engagement · dossier consultable à vie</div>
+              </div>
+              <span style="margin-left: auto; font-size: 22px; color: rgba(255,255,255,.45);">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TRAITEMENTS ===== -->
+  <div id="traitements" style="position: relative; z-index: 1; padding: 40px 24px 140px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+        <div>
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #2E63A8;">02 — Traitements</div>
+          <h2 style="margin: 18px 0 0; max-width: 640px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(34px, 4vw, 58px); line-height: 1.03; letter-spacing: -0.03em; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 70%;">
+            Une technique choisie <span style="font-style: italic; color: #2E63A8;">pour vous</span>, pas l'inverse.
+          </h2>
+        </div>
+        <p style="max-width: 340px; font-size: 15.5px; line-height: 1.65; color: #465873;">Chaque protocole est établi après scanner 3D, analyse céphalométrique et entretien clinique au cabinet.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px; margin-top: 56px;">
+        <div style="padding: 28px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.8), rgba(255,255,255,.45)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -32px rgba(10,31,60,.4), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 60%;" style-hover="transform: translateY(-6px); box-shadow: 0 44px 90px -34px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
+          <div style="height: 148px; border-radius: 6px; background: radial-gradient(120% 100% at 50% 40%, rgba(231,238,248,.9), rgba(238,242,247,.5)); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img src="assets/img/gouttiere.webp" alt="Gouttière d'alignement transparente" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 14px rgba(10,31,60,.18));" /></div>
+          <div style="margin-top: 22px; font-size: 21px; font-weight: 700; letter-spacing: -0.025em;">Aligneurs transparents</div>
+          <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873;">Invisibles, amovibles, imprimés sur mesure. Le choix des adultes actifs.</p>
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(10,31,60,.09); display: flex; justify-content: space-between; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #6B7C96;"><span>6–18 mois</span><span style="color: #2E63A8;">Discret ●●●</span></div>
+        </div>
+
+        <div style="padding: 28px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.8), rgba(255,255,255,.45)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -32px rgba(10,31,60,.4), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .07s; animation-timeline: view(); animation-range: entry 0% entry 60%;" style-hover="transform: translateY(-6px); box-shadow: 0 44px 90px -34px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
+          <div style="height: 148px; border-radius: 6px; overflow: hidden;"><img src="assets/img/multi-attaches.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%;" /></div>
+          <div style="margin-top: 22px; font-size: 21px; font-weight: 700; letter-spacing: -0.025em;">Multi‑attaches esthétique</div>
+          <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873;">Céramique ou lingual pour les cas complexes, sans sacrifier l'apparence.</p>
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(10,31,60,.09); display: flex; justify-content: space-between; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #6B7C96;"><span>12–24 mois</span><span style="color: #2E63A8;">Précis ●●●</span></div>
+        </div>
+
+        <div style="padding: 28px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.8), rgba(255,255,255,.45)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -32px rgba(10,31,60,.4), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .14s; animation-timeline: view(); animation-range: entry 0% entry 60%;" style-hover="transform: translateY(-6px); box-shadow: 0 44px 90px -34px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
+          <div style="height: 148px; border-radius: 6px; overflow: hidden;"><img src="assets/img/enfants.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;" /></div>
+          <div style="margin-top: 22px; font-size: 21px; font-weight: 700; letter-spacing: -0.025em;">Enfants &amp; adolescents</div>
+          <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #465873;">Interception précoce, guidage de croissance et suivi jusqu'à la contention.</p>
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(10,31,60,.09); display: flex; justify-content: space-between; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #6B7C96;"><span>dès 7 ans</span><span style="color: #2E63A8;">Préventif ●●●</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CABINET / DR ===== -->
+  <div id="equipe" style="position: relative; z-index: 1; padding: 20px 24px 140px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); gap: 64px; align-items: center;">
+      <div style="position: relative; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 70%;">
+        <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 56px 110px -50px rgba(10,31,60,.5);">
+          <img src="assets/img/team.webp" alt="L'équipe du cabinet du Dr Desouches" style="display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 20%; animation: zoomOut 1s linear both; animation-timeline: view(); animation-range: cover 0% cover 100%;" />
+        </div>
+        <div style="position: absolute; right: clamp(-28px, calc(1288px - 100vw), 0px); bottom: -28px; width: 232px; padding: 20px 22px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.88), rgba(255,255,255,.55)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -28px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 7s ease-in-out infinite;">
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96;">L'équipe</div>
+          <div style="margin-top: 8px; font-size: 15px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em;">6 Praticien(ne)s / Assistantes dentaires qualifié(e)s</div>
+          <a href="cabinet-aix-en-provence.html" style="display: inline-block; margin-top: 12px; font-size: 12.5px; font-weight: 600; color: #2E63A8;">Voir le cabinet ↗</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #2E63A8;">03 — Le praticien &amp; l'équipe</div>
+        <h2 style="margin: 18px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(34px, 4vw, 56px); line-height: 1.03; letter-spacing: -0.03em; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 70%;">
+          Le Dr Desouches <span style="font-style: italic; color: #2E63A8;">et son équipe.</span>
+        </h2>
+        <p style="margin: 26px 0 0; max-width: 480px; font-size: 16.5px; line-height: 1.68; color: #465873;">
+          Chirurgien‑dentiste orthodontiste qualifié, le Dr Renaud Desouches conçoit chaque traitement comme un projet sur mesure&nbsp;: diagnostic numérique complet, objectifs partagés, et un seul praticien du premier rendez‑vous à la contention. Les gouttières sont produites au cabinet, route de Galice.
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px;">
+          <div style="padding: 20px; border-radius: 8px; background: rgba(255,255,255,.62); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.9);">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 30px; line-height: 1;">22 ans</div>
+            <div style="margin-top: 6px; font-size: 13px; color: #465873;">de pratique exclusive</div>
+          </div>
+          <div style="padding: 20px; border-radius: 8px; background: rgba(255,255,255,.62); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.9);">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 30px; line-height: 1;">100 %</div>
+            <div style="margin-top: 6px; font-size: 13px; color: #465873;">empreintes numériques</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; margin-top: 28px; background: rgba(10,31,60,.12);">
+          <div style="padding: 20px 22px; background: #FBFCFD;">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; line-height: 1; letter-spacing: -0.01em;">Sandrine</div>
+            <div style="margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: #465873;">Assistante dentaire qualifiée</div>
+          </div>
+          <div style="padding: 20px 22px; background: #FBFCFD;">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; line-height: 1; letter-spacing: -0.01em;">Magali</div>
+            <div style="margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: #465873;">Assistante dentaire qualifiée</div>
+          </div>
+          <div style="padding: 20px 22px; background: #FBFCFD;">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; line-height: 1; letter-spacing: -0.01em;">Fiona</div>
+            <div style="margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: #465873;">Prothésiste dentaire</div>
+          </div>
+          <div style="padding: 20px 22px; background: #FBFCFD;">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; line-height: 1; letter-spacing: -0.01em;">Samantha</div>
+            <div style="margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: #465873;">Prothésiste dentaire</div>
+          </div>
+          <div style="padding: 20px 22px; background: #FBFCFD;">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; line-height: 1; letter-spacing: -0.01em;">Emeline</div>
+            <div style="margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: #465873;">Assistante dentaire qualifiée<br />Accueil &amp; secrétariat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CABINET & ACCES ===== -->
+  <div id="cabinet" style="position: relative; z-index: 1; padding: 0 24px 140px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px;">
+      <div style="display: flex; align-items: baseline; gap: 18px; padding-bottom: 22px; border-bottom: 1px solid rgba(10,31,60,.12);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #2E63A8;">04 — Le cabinet &amp; accès</div>
+        <div style="margin-left: auto; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #6B7C96;">Cabinet d'orthodontie &amp; production de gouttières</div>
+      </div>
+      <div style="position: relative; margin-top: 28px;">
+        <img src="assets/img/cabinet-2.webp" alt="Le cabinet du Dr Desouches à Aix-en-Provence" style="display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: 50% 78%; border-radius: 10px; box-shadow: 0 44px 100px -50px rgba(10,31,60,.55); animation: zoomOut 1s linear both; animation-timeline: view(); animation-range: cover 0% cover 100%;" />
+        <div style="position: absolute; left: 26px; bottom: 26px; display: flex; flex-wrap: wrap; gap: 14px;">
+          <div style="min-width: 236px; padding: 20px 22px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.88), rgba(255,255,255,.55)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -28px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Adresse</div>
+            <div style="margin-top: 8px; font-size: 15.5px; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em;">1422 route de Galice<br />13090 Aix‑en‑Provence</div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=1422+route+de+Galice+13090+Aix-en-Provence" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #2E63A8;">Itinéraire ↗</a>
+          </div>
+          <div style="min-width: 262px; padding: 20px 22px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.88), rgba(255,255,255,.55)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -28px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
+            <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Horaires</div>
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px; font-size: 13.5px; font-weight: 600; letter-spacing: -0.005em; white-space: nowrap;"><div style="display: flex; justify-content: space-between; gap: 16px;"><span style="color: #6B7C96;">Mardi</span><span>9h30–12h · 14h–19h</span></div><div style="display: flex; justify-content: space-between; gap: 16px;"><span style="color: #6B7C96;">Mercredi</span><span>9h30–12h · 14h–19h</span></div><div style="display: flex; justify-content: space-between; gap: 16px;"><span style="color: #6B7C96;">Jeudi</span><span>9h30–12h · 14h–19h</span></div><div style="display: flex; justify-content: space-between; gap: 16px;"><span style="color: #6B7C96;">Vendredi</span><span>9h30–12h · 14h–19h</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1px; margin-top: 28px; background: rgba(10,31,60,.12);">
+        <div style="padding: 22px 24px; background: #FBFCFD;">
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Parking</div>
+          <div style="margin-top: 8px; font-size: 14.5px; line-height: 1.55; color: #465873;">Gratuit.</div>
+        </div>
+        <div style="padding: 22px 24px; background: #FBFCFD;">
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Accessibilité</div>
+          <div style="margin-top: 8px; font-size: 14.5px; line-height: 1.55; color: #465873;">Accès de plain‑pied.</div>
+        </div>
+        <div style="padding: 22px 24px; background: #FBFCFD;">
+          <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Équipement</div>
+          <div style="margin-top: 8px; font-size: 14.5px; line-height: 1.55; color: #465873;">Scanner intra‑oral 3D, radiologie sur place.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AVIS ===== -->
+  <div style="position: relative; z-index: 1; padding: 20px 24px 140px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px;">
+        <div style="padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.78), rgba(255,255,255,.42)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 28px 66px -32px rgba(10,31,60,.38), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 60%;">
+          <div style="font-size: 13px; letter-spacing: .3em; color: #2E63A8;">★★★★★</div>
+          <p style="margin: 18px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.42; letter-spacing: -0.015em;">« Le diagnostic en ligne m'a évité trois déplacements. Tout était déjà prêt à ma première visite. »</p>
+          <div style="margin-top: 20px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: #6B7C96;">Camille R. · Aligneurs</div>
+        </div>
+        <div style="padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.78), rgba(255,255,255,.42)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 28px 66px -32px rgba(10,31,60,.38), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .07s; animation-timeline: view(); animation-range: entry 0% entry 60%;">
+          <div style="font-size: 13px; letter-spacing: .3em; color: #2E63A8;">★★★★★</div>
+          <p style="margin: 18px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.42; letter-spacing: -0.015em;">« Un cabinet d'une propreté irréprochable et des explications d'une clarté rare. »</p>
+          <div style="margin-top: 20px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: #6B7C96;">Julien M. · Multi‑attaches</div>
+        </div>
+        <div style="padding: 30px; border-radius: 10px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.78), rgba(255,255,255,.42)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 28px 66px -32px rgba(10,31,60,.38), inset 0 1px 0 rgba(255,255,255,1); animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .14s; animation-timeline: view(); animation-range: entry 0% entry 60%;">
+          <div style="font-size: 13px; letter-spacing: .3em; color: #2E63A8;">★★★★★</div>
+          <p style="margin: 18px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.42; letter-spacing: -0.015em;">« Ma fille de 9 ans n'a jamais eu peur de venir. C'est tout dire. »</p>
+          <div style="margin-top: 20px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: #6B7C96;">Sophie L. · Interception</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA / RDV ===== -->
+  <div id="rdv" style="position: relative; z-index: 1; padding: 0 24px 120px; display: flex; justify-content: center;">
+    <div style="position: relative; overflow: hidden; width: 100%; max-width: 1240px; padding: clamp(56px, 6vw, 96px) clamp(28px, 4.5vw, 64px); border-radius: 12px; background: linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(150deg, #14304F 0%, #0A1F3C 52%, #061428 100%); box-shadow: 0 70px 140px -60px rgba(10,31,60,.9); animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-timeline: view(); animation-range: entry 0% entry 65%;">
+      <div style="position: absolute; z-index: 2; right: clamp(20px, 4vw, 64px); bottom: 0; width: 420px; max-width: 42%; pointer-events: none;">
+        <img src="assets/img/brain.webp" alt="" style="display: block; width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 30px 60px rgba(0,0,0,.45));" />
+      </div>
+      <div style="position: relative; z-index: 3; max-width: 720px;">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: #7FA6D9;">05 — Contact &amp; rendez‑vous</div>
+        <h2 style="margin: 22px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(38px, 4.6vw, 66px); line-height: 1.02; letter-spacing: -0.03em; color: #fff;">Commençons par <span style="font-style: italic; color: #7FA6D9;">regarder votre sourire.</span></h2>
+        <p style="margin: 26px 0 0; max-width: 460px; font-size: 17px; line-height: 1.65; color: rgba(255,255,255,.66);">Premier bilan au cabinet ou diagnostic OrthoMind depuis chez vous. Dans les deux cas, un praticien vous répond.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px;">
+          <a href="ortho-mind.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 20px 32px; border-radius: 999px; background: #fff; color: #0A1F3C; font-size: 15px; font-weight: 700;" style-hover="transform: translateY(-2px); box-shadow: 0 24px 50px -20px rgba(0,0,0,.5);">
+            <span style="color: #0A1F3C;">Démarrer mon Évaluation Orthodontique</span><span style="color: #6B7C96;">→</span>
+          </a>
+          <a href="tel:+33442205043" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 20px 30px; border-radius: 999px; background: rgba(255,255,255,.1); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.24); color: #fff; font-size: 15px; font-weight: 600;" style-hover="background: rgba(255,255,255,.18);">
+            <span style="color: #fff;">Appeler le cabinet</span>
+          </a>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 22px; max-width: 460px; margin-top: 52px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.5);">
+          <span>Mardi–Vendredi · 9h30–12h &amp; 14h–19h</span><span>04 42 20 50 43</span><span>1422 route de Galice, 13090 Aix‑en‑Provence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div style="position: relative; z-index: 1; padding: 0 24px 56px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1240px; padding-top: 40px; border-top: 1px solid rgba(10,31,60,.1); display: flex; flex-wrap: wrap; gap: 32px; align-items: center;">
+      <div style="margin-right: auto;">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em;">Dr. DESOUCHES</div>
+        <div style="margin-top: 6px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: #6B7C96;">Chirurgien‑dentiste orthodontiste qualifié · 1422 route de Galice, 13090 Aix‑en‑Provence</div>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <a href="https://www.instagram.com/dr.renauddesouches/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: rgba(255,255,255,.66); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.9); font-size: 12.5px; font-weight: 600;" style-hover="background: rgba(255,255,255,.9);">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@dr.renauddesouches" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: rgba(255,255,255,.66); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.9); font-size: 12.5px; font-weight: 600;" style-hover="background: rgba(255,255,255,.9);">TikTok ↗</a>
+        <a href="ortho-mind.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: rgba(255,255,255,.66); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.9); font-size: 12.5px; font-weight: 600;" style-hover="background: rgba(255,255,255,.9);">OrthoMind ↗</a>
+      </div>
+      <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 24px; font-size: 12px; color: #6B7C96;">
+        <span>© 2026 Cabinet Dr Desouches</span><a href="mentions-legales.html" style="color: #6B7C96;">Mentions légales</a><a href="confidentialite.html" style="color: #6B7C96;">Politique de confidentialité</a><a href="index.html" style="color: #6B7C96;">Accessibilité</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://desouches-orthodontie-aix.com/#cabinet",
+  "name": "Dr Renaud Desouches — Orthodontiste",
+  "description": "Cabinet d’orthodontie à Aix-en-Provence spécialisé dans les traitements par aligneurs transparents pour les enfants, les adolescents et les adultes.",
+  "medicalSpecialty": "Orthodontic",
+  "url": "https://desouches-orthodontie-aix.com/",
+  "telephone": "+33442205043",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1422 route de Galice",
+    "addressLocality": "Aix-en-Provence",
+    "postalCode": "13090",
+    "addressRegion": "Provence-Alpes-Côte d’Azur",
+    "addressCountry": "FR"
+  },
+  "areaServed": { "@type": "City", "name": "Aix-en-Provence" },
+  "sameAs": ["https://www.doctolib.fr/orthodontiste/aix-en-provence/renaud-desouches", "https://www.instagram.com/dr.renauddesouches/", "https://www.tiktok.com/@dr.renauddesouches"],
+  "openingHours": "Tu-Fr 09:30-12:00,14:00-19:00",
+  "founder": {
+    "@type": "Person",
+    "name": "Renaud Desouches",
+    "jobTitle": "Orthodontiste",
+    "url": "https://desouches-orthodontie-aix.com/dr-renaud-desouches.html"
+  }
+}
+</script>
+</body>
+</html>
