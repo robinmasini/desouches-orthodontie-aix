@@ -91,6 +91,32 @@
   [data-social] { position: static !important; inset: auto !important; width: auto !important; z-index: auto !important; animation: none !important; padding: 14px 16px !important; box-shadow: 0 12px 26px -20px rgba(10,31,60,.4), inset 0 1px 0 rgba(255,255,255,.9) !important; }
   [data-social] p { font-size: 12.5px !important; }
 }
+
+  /* ===== Ancres de la barre du haut =====
+     La barre est en position fixe : sans cette marge, les titres de section
+     se retrouveraient dessous à l'arrivée. */
+  #top, #orthomind, #traitements, #equipe, #cabinet, #rdv { scroll-margin-top: 108px; }
+  @media (max-width: 980px) {
+    #top, #orthomind, #traitements, #equipe, #cabinet, #rdv { scroll-margin-top: 88px; }
+  }
+
+  /* ===== Modale « à venir » de l'évaluation orthodontique ===== */
+  .modale { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 24px; }
+  .modale[hidden] { display: none; }  /* display:grid écraserait sinon l'attribut hidden */
+  .modale__voile { position: absolute; inset: 0; background: rgba(10, 31, 60, .55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: fadeIn .22s ease both; }
+  .modale__carte { position: relative; width: min(100%, 440px); padding: 40px 34px 32px; text-align: center; background: #fff; border-radius: 26px; box-shadow: 0 40px 90px -30px rgba(10, 31, 60, .6), inset 0 1px 0 rgba(255, 255, 255, .9); animation: riseSm .26s cubic-bezier(.2, .7, .3, 1) both; }
+  .modale__logo { width: 84px; height: auto; margin: 0 auto 22px; display: block; }
+  .modale__titre { margin: 0 0 12px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.1; letter-spacing: -.01em; color: #0A1F3C; }
+  .modale__texte { margin: 0 0 26px; font-size: 14.5px; line-height: 1.6; color: #5A6B85; }
+  .modale__actions { display: flex; flex-direction: column; gap: 10px; }
+  .modale__bouton { display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px; border: 0; border-radius: 999px; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; }
+  .modale__bouton:hover { color: #fff; }
+  .modale__lien { font-size: 13px; font-weight: 500; color: #2E63A8; }
+  .modale__fermer { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 999px; background: transparent; color: #6B7C96; font-size: 19px; line-height: 1; cursor: pointer; }
+  .modale__fermer:hover { background: #F0F3F7; color: #0A1F3C; }
+  @media (prefers-reduced-motion: reduce) {
+    .modale__voile, .modale__carte { animation: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -119,17 +145,17 @@
   <!-- ===== NAV ===== -->
   <div style="position: fixed; top: 22px; left: 0; right: 0; z-index: 80; display: flex; justify-content: center; padding: 0 24px;">
     <div style="width: 100%; max-width: 1240px; display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); padding: 12px 12px 12px 26px; overflow: hidden; background: linear-gradient(140deg, rgba(255,255,255,.80), rgba(255,255,255,.52)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 20px 50px -24px rgba(10,31,60,.30), inset 0 1px 0 rgba(255,255,255,.95);">
-      <a href="index.html" style="display: flex; align-items: baseline; gap: 10px; margin-right: auto; flex: none; white-space: nowrap;">
+      <a href="#top" style="display: flex; align-items: baseline; gap: 10px; margin-right: auto; flex: none; white-space: nowrap;">
         <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 25px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; flex: none;">Dr. DESOUCHES</span>
       </a>
       <div style="display: flex; align-items: center; gap: clamp(13px, 1.7vw, 26px); flex: none; white-space: nowrap; font-size: 13.5px; font-weight: 500; color: #33455F;">
-        <a href="ortho-mind.html" style="color: inherit;">OrthoMind</a>
-        <a href="aligneurs.html" style="color: inherit;">Traitements</a>
-        <a href="dr-renaud-desouches.html" style="color: inherit;">L'équipe</a>
-        <a href="cabinet-aix-en-provence.html" style="color: inherit;">Le cabinet</a>
-        <a href="rendez-vous.html" style="color: inherit;">Rendez‑vous</a>
+        <a href="#orthomind" style="color: inherit;">OrthoMind</a>
+        <a href="#traitements" style="color: inherit;">Traitements</a>
+        <a href="#equipe" style="color: inherit;">L'équipe</a>
+        <a href="#cabinet" style="color: inherit;">Le cabinet</a>
+        <a href="#rdv" style="color: inherit;">Rendez‑vous</a>
       </div>
-      <a href="rendez-vous.html" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; padding: 14px 24px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 13.5px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 16px 34px -16px rgba(10,31,60,.6), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="box-shadow: 0 22px 42px -14px rgba(10,31,60,.72), inset 0 1px 0 rgba(255,255,255,.3); transform: translateY(-1px);">
+      <a href="#orthomind" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; padding: 14px 24px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 13.5px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 16px 34px -16px rgba(10,31,60,.6), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="box-shadow: 0 22px 42px -14px rgba(10,31,60,.72), inset 0 1px 0 rgba(255,255,255,.3); transform: translateY(-1px);">
         <span style="color: #fff;">Ma téléconsultation</span>
         <span style="width: 6px; height: 6px; border-radius: 999px; background: #7FA6D9; box-shadow: 0 0 10px #7FA6D9;"></span>
       </a>
@@ -159,7 +185,7 @@
         </p>
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .16s;">
-          <a href="rendez-vous.html" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 19px 30px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 15px; font-weight: 600; box-shadow: 0 26px 50px -22px rgba(10,31,60,.75), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="transform: translateY(-2px); box-shadow: 0 32px 60px -20px rgba(10,31,60,.85), inset 0 1px 0 rgba(255,255,255,.3);">
+          <a data-eval href="ortho-mind.html" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 19px 30px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 15px; font-weight: 600; box-shadow: 0 26px 50px -22px rgba(10,31,60,.75), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="transform: translateY(-2px); box-shadow: 0 32px 60px -20px rgba(10,31,60,.85), inset 0 1px 0 rgba(255,255,255,.3);">
             <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span>
             <span style="color: rgba(255,255,255,.55); font-size: 18px; line-height: 1;">→</span>
           </a>
@@ -209,7 +235,7 @@
             </span>
           </div>
           <p style="margin: 12px 0 0; font-size: 13px; line-height: 1.55; color: #3C4F6B;">Photographiez votre sourire. Votre bilan est vérifié par nos chirurgiens‑dentistes qualifié(e)s.</p>
-          <a href="rendez-vous.html" style="display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 12px 16px; border-radius: 6px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 12.5px; font-weight: 600; white-space: nowrap;" style-hover="transform: translateY(-1px);">
+          <a data-eval href="ortho-mind.html" style="display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 12px 16px; border-radius: 6px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 12.5px; font-weight: 600; white-space: nowrap;" style-hover="transform: translateY(-1px);">
             <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span><span style="color: rgba(255,255,255,.5);">→</span>
           </a>
         </div>
@@ -297,7 +323,7 @@
           <p style="margin: 24px 0 0; max-width: 420px; font-size: 16.5px; line-height: 1.65; color: #465873; animation: rise .9s cubic-bezier(.16,1,.3,1) both; animation-delay: .1s; animation-timeline: view(); animation-range: entry 0% entry 80%;">
             Notre logiciel d'auto‑téléconsultation guide vos prises de vue, analyse votre alignement et transmet le dossier à nos chirurgiens‑dentistes qualifié(e)s. Aucun algorithme ne décide seul&nbsp;: chaque plan est validé humainement.
           </p>
-          <a href="rendez-vous.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; margin-top: 34px; padding: 18px 28px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 14.5px; font-weight: 600; box-shadow: 0 24px 48px -22px rgba(10,31,60,.7);" style-hover="transform: translateY(-2px);">
+          <a data-eval href="ortho-mind.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; margin-top: 34px; padding: 18px 28px; border-radius: 999px; background: linear-gradient(160deg, #14304F, #08172C); color: #fff; font-size: 14.5px; font-weight: 600; box-shadow: 0 24px 48px -22px rgba(10,31,60,.7);" style-hover="transform: translateY(-2px);">
             <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span><span style="color: rgba(255,255,255,.5);">→</span>
           </a>
         </div>
@@ -517,7 +543,7 @@
         <h2 style="margin: 22px 0 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(38px, 4.6vw, 66px); line-height: 1.02; letter-spacing: -0.03em; color: #fff;">Commençons par <span style="font-style: italic; color: #7FA6D9;">regarder votre sourire.</span></h2>
         <p style="margin: 26px 0 0; max-width: 460px; font-size: 17px; line-height: 1.65; color: rgba(255,255,255,.66);">Premier bilan au cabinet ou diagnostic OrthoMind depuis chez vous. Dans les deux cas, un praticien vous répond.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px;">
-          <a href="ortho-mind.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 20px 32px; border-radius: 999px; background: #fff; color: #0A1F3C; font-size: 15px; font-weight: 700;" style-hover="transform: translateY(-2px); box-shadow: 0 24px 50px -20px rgba(0,0,0,.5);">
+          <a data-eval href="ortho-mind.html" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 20px 32px; border-radius: 999px; background: #fff; color: #0A1F3C; font-size: 15px; font-weight: 700;" style-hover="transform: translateY(-2px); box-shadow: 0 24px 50px -20px rgba(0,0,0,.5);">
             <span style="color: #0A1F3C;">Démarrer mon Évaluation Orthodontique</span><span style="color: #6B7C96;">→</span>
           </a>
           <a href="tel:+33442205043" style="display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 20px 30px; border-radius: 999px; background: rgba(255,255,255,.1); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.24); color: #fff; font-size: 15px; font-weight: 600;" style-hover="background: rgba(255,255,255,.18);">
@@ -578,6 +604,67 @@
     "url": "https://desouches-orthodontie-aix.com/dr-renaud-desouches.html"
   }
 }
+</script>
+<!-- ===== MODALE « ÉVALUATION À VENIR » ===== -->
+<div class="modale" id="modale-eval" hidden role="dialog" aria-modal="true" aria-labelledby="modale-eval-titre">
+  <div class="modale__voile" data-fermer></div>
+  <div class="modale__carte">
+    <button class="modale__fermer" type="button" data-fermer aria-label="Fermer">&times;</button>
+    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoMind" width="315" height="444" loading="lazy" decoding="async">
+    <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
+    <p class="modale__texte">L'évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
+    <div class="modale__actions">
+      <a class="modale__bouton" href="rendez-vous.html">Prendre rendez&#8209;vous</a>
+      <a class="modale__lien" href="ortho-mind.html">En savoir plus sur OrthoMind &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Modale « à venir » : les CTA d'évaluation l'ouvrent au lieu de mener à une page.
+   Sans JavaScript, le lien reste fonctionnel et mène à ortho-mind.html. */
+(function () {
+  var modale = document.getElementById('modale-eval');
+  if (!modale) return;
+  var declencheur = null;
+
+  var focalisables = function () {
+    return modale.querySelectorAll('a[href], button:not([disabled])');
+  };
+
+  function ouvrir(e) {
+    e.preventDefault();
+    declencheur = e.currentTarget;
+    modale.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var f = focalisables();
+    if (f.length) f[f.length - 1].focus();   // le bouton Fermer est en premier dans le DOM
+  }
+
+  function fermer() {
+    modale.hidden = true;
+    document.body.style.overflow = '';
+    if (declencheur) declencheur.focus();
+  }
+
+  [].forEach.call(document.querySelectorAll('[data-eval]'), function (el) {
+    el.addEventListener('click', ouvrir);
+  });
+  [].forEach.call(modale.querySelectorAll('[data-fermer]'), function (el) {
+    el.addEventListener('click', fermer);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (modale.hidden) return;
+    if (e.key === 'Escape') { fermer(); return; }
+    if (e.key !== 'Tab') return;
+    var f = focalisables();
+    if (!f.length) return;
+    var premier = f[0], dernier = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
+    else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
+  });
+})();
 </script>
 </body>
 </html>

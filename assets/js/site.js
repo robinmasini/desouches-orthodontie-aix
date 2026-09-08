@@ -410,6 +410,52 @@
   }
 
   /* ---------------------------------------------------------------------- */
+  /* --- Modale « évaluation à venir » --------------------------------------
+     Les CTA d'évaluation ouvrent la modale plutôt que de mener à une page.
+     Sans JavaScript, leur href reste valide : la modale est une surcouche. */
+  function modaleEval() {
+    var modale = document.getElementById('modale-eval');
+    if (!modale) return;
+    var declencheur = null;
+
+    function focalisables() {
+      return modale.querySelectorAll('a[href], button:not([disabled])');
+    }
+
+    function ouvrir(e) {
+      e.preventDefault();
+      declencheur = e.currentTarget;
+      modale.hidden = false;
+      document.body.style.overflow = 'hidden';
+      var f = focalisables();
+      if (f.length) f[f.length - 1].focus();
+    }
+
+    function fermer() {
+      modale.hidden = true;
+      document.body.style.overflow = '';
+      if (declencheur) declencheur.focus();
+    }
+
+    [].forEach.call(document.querySelectorAll('[data-eval]'), function (el) {
+      el.addEventListener('click', ouvrir);
+    });
+    [].forEach.call(modale.querySelectorAll('[data-fermer]'), function (el) {
+      el.addEventListener('click', fermer);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (modale.hidden) return;
+      if (e.key === 'Escape') { fermer(); return; }
+      if (e.key !== 'Tab') return;
+      var f = focalisables();
+      if (!f.length) return;
+      var premier = f[0], dernier = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
+      else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
+    });
+  }
+
   function demarrer() {
     entete();
     revelations();
@@ -419,6 +465,7 @@
     faq();
     filtres();
     divers();
+    modaleEval();
   }
 
   if (document.readyState === 'loading') {

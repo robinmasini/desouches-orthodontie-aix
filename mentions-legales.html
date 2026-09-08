@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=43a0e44f">
 </head>
 <body>
 <a class="saut-contenu" href="#contenu">Aller au contenu</a>
@@ -247,6 +247,19 @@
   }
 }
 </script>
-<script src="assets/js/site.js" defer></script>
+<div class="modale" id="modale-eval" hidden role="dialog" aria-modal="true" aria-labelledby="modale-eval-titre">
+  <div class="modale__voile" data-fermer></div>
+  <div class="modale__carte">
+    <button class="modale__fermer" type="button" data-fermer aria-label="Fermer">&times;</button>
+    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoMind" width="315" height="444" loading="lazy" decoding="async">
+    <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
+    <p class="modale__texte">L’évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
+    <div class="modale__actions">
+      <a class="btn btn--primaire" href="rendez-vous.html">Prendre rendez-vous</a>
+      <a class="modale__lien" href="ortho-mind.html">En savoir plus sur OrthoMind &rarr;</a>
+    </div>
+  </div>
+</div>
+<script src="assets/js/site.js?v=f549453d" defer></script>
 </body>
 </html>

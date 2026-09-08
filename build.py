@@ -6,10 +6,20 @@ L'en-tête et le pied de page sont extraits de index.html : une seule source.
 
 Usage :  python3 build.py
 """
-import os, re, json, datetime
+import os, re, json, hashlib, datetime
 
 RACINE = os.path.dirname(os.path.abspath(__file__))
 DOMAINE = "https://desouches-orthodontie-aix.com"
+
+
+def empreinte(chemin):
+    """Hachage court du contenu d'un asset.
+
+    Vercel sert /assets/ en Cache-Control immutable pendant un an. Sans cette
+    empreinte dans l'URL, un visiteur déjà venu garderait l'ancien CSS ou JS
+    et ne verrait jamais les corrections."""
+    with open(os.path.join(RACINE, chemin), "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:8]
 
 # --------------------------------------------------------------------------
 # 1. Extraction de l'en-tête et du pied depuis l'accueil
@@ -38,7 +48,10 @@ FLECHE = ('<span class="puce" aria-hidden="true"><svg viewBox="0 0 12 12">'
 def btn(texte, href, style="fantome", fleche=False):
     cls = "btn btn--primaire" if style == "primaire" else "btn btn--fantome"
     ext = ' target="_blank" rel="noopener"' if href.startswith("http") else ""
-    return '<a class="%s" href="%s"%s>%s%s</a>' % (cls, href, ext, texte, FLECHE if fleche else "")
+    # L'évaluation en ligne n'est pas encore ouverte : le CTA ouvre une modale.
+    # Le href reste le repli si JavaScript est indisponible.
+    marque = ' data-eval' if "Évaluation Orthodontique" in texte else ""
+    return '<a class="%s" href="%s"%s%s>%s%s</a>' % (cls, href, ext, marque, texte, FLECHE if fleche else "")
 
 
 def visuel(fichier, alt, legende=None, ratio="3/2", variante="", largeur=None, hauteur=None):
@@ -172,7 +185,7 @@ APPEL = bande(
     '<p>Première consultation, bilan orthodontique, examen clinique. Pour un enfant, '
     'un adolescent ou un adulte.</p>'
     '<span class="btn btn--primaire">Prendre rendez-vous%s</span></a>'
-    '<a class="voie" href="ortho-mind.html"><h3>Je veux d’abord une évaluation en ligne</h3>'
+    '<a class="voie" data-eval href="ortho-mind.html"><h3>Je veux d’abord une évaluation en ligne</h3>'
     '<p>Quelques photos depuis votre téléphone, une première orientation avant de vous '
     'déplacer.</p><span class="btn btn--fantome">Démarrer mon Évaluation Orthodontique</span></a></div>' % FLECHE,
     variante="marine") .replace('<section class="bande bande--marine">',
@@ -203,7 +216,7 @@ GABARIT = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v={v_css}">
 </head>
 <body>
 <a class="saut-contenu" href="#contenu">Aller au contenu</a>
@@ -227,7 +240,20 @@ GABARIT = """<!DOCTYPE html>
 <script type="application/ld+json">
 {schema}
 </script>
-<script src="assets/js/site.js" defer></script>
+<div class="modale" id="modale-eval" hidden role="dialog" aria-modal="true" aria-labelledby="modale-eval-titre">
+  <div class="modale__voile" data-fermer></div>
+  <div class="modale__carte">
+    <button class="modale__fermer" type="button" data-fermer aria-label="Fermer">&times;</button>
+    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoMind" width="315" height="444" loading="lazy" decoding="async">
+    <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
+    <p class="modale__texte">L’évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
+    <div class="modale__actions">
+      <a class="btn btn--primaire" href="rendez-vous.html">Prendre rendez-vous</a>
+      <a class="modale__lien" href="ortho-mind.html">En savoir plus sur OrthoMind &rarr;</a>
+    </div>
+  </div>
+</div>
+<script src="assets/js/site.js?v={v_js}" defer></script>
 </body>
 </html>
 """
@@ -1419,7 +1445,8 @@ def ecrire():
             title=p["title"], description=p["description"], slug=p["slug"], domaine=DOMAINE,
             entete=marquer_actif(ENTETE, p["slug"]), h1=p["h1"], chapo=p["chapo"],
             actions=p["actions"], corps=p["corps"], appel=APPEL if p["actions"] else "",
-            pied=PIED, schema=p["schema"], fil=p["fil"], rubrique=p["rubrique"])
+            pied=PIED, schema=p["schema"], fil=p["fil"], rubrique=p["rubrique"],
+            v_css=empreinte("assets/css/site.css"), v_js=empreinte("assets/js/site.js"))
         with open(os.path.join(RACINE, p["slug"]), "w", encoding="utf-8") as f:
             f.write(html)
     print("%d pages générées." % len(PAGES))

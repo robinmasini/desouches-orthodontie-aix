@@ -92,6 +92,15 @@ le contraste azur/marine étant insuffisant pour du texte.
 - **Mouvement lié au défilement** (section 19 du CSS) : jauge de lecture, parallaxe,
   révélations et pivot 3D du hero, en `animation-timeline: scroll()` / `view()`.
   Aucune bibliothèque, aucun JavaScript.
+- **Barre du haut de l'accueil** : les entrées sont des ancres (`#top`, `#orthomind`,
+  `#traitements`, `#equipe`, `#cabinet`, `#rdv`) et non des liens vers des pages. Elles
+  défilent dans la page. Le `scroll-margin-top` dégage la hauteur de la barre fixe.
+  Les pages intérieures gardent, elles, une navigation classique.
+- **Modale « évaluation à venir »** : les CTA « Démarrer mon Évaluation Orthodontique »
+  portent `data-eval` et ouvrent une modale au lieu de mener à une page. Fermeture par
+  Échap, clic sur le voile ou la croix ; focus piégé puis rendu au déclencheur. Sans
+  JavaScript, le `href` de repli reste actif. Le balisage vit dans le gabarit de
+  `build.py` (pages intérieures) et en bas d'`index.html` (accueil, autonome).
 - `prefers-reduced-motion` respecté : toutes les animations sont neutralisées.
 
 ### Support des animations liées au défilement
@@ -129,3 +138,9 @@ orthodontiques Aix · prix orthodontiste Aix · bilan 6–7 ans.
 - Les polices sont chargées depuis Google Fonts. Pour la performance et le RGPD,
   les auto-héberger.
 - Aucune image de patient ne doit être publiée sans autorisation écrite.
+- `site.css` et `site.js` sont appelés avec une empreinte de contenu (`?v=…`) calculée
+  par `build.py`. Vercel sert `/assets/` en `immutable` un an : sans elle, un visiteur
+  déjà venu garderait indéfiniment l'ancienne version. Ne pas retirer ce paramètre.
+- L'accueil ne lie plus `aligneurs.html` ni `dr-renaud-desouches.html` depuis sa barre
+  du haut, devenue un jeu d'ancres. Les deux pages restent dans le `sitemap.xml` et
+  liées depuis les pages intérieures, mais ne reçoivent plus de lien de l'accueil.
