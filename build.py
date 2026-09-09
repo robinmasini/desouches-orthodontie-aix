@@ -1313,8 +1313,8 @@ page(
           '</div><div data-reveler data-reveler-delai="1">' +
           prose(
               "<h3>Stationnement</h3><p>Parking gratuit sur place.</p>"
-              "<h3>Accessibilité</h3><p>Accès de plain-pied.</p>"
-              "<h3>Équipement</h3><p>Scanner intra-oral 3D et radiologie sur place.</p>"
+              "<h3>Accessibilité</h3><p>Accès rez-de-chaussée.</p>"
+              "<h3>Équipement</h3><p>Scanner intra-oral 3D et radiologie 3D.</p>"
               "<h3>Transports</h3><p>Lignes de bus et arrêts les plus proches : à compléter.</p>") +
           '<div class="cadre" style="margin-top:1.5rem;background:var(--glace-clair);border:0;'
           'display:grid;place-items:center;min-height:16rem;text-align:center">'
