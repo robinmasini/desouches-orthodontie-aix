@@ -73,7 +73,10 @@
   [data-hero-stats] { grid-area: auto !important; order: 3; position: relative; z-index: 5; margin-top: 34px !important; gap: 18px !important; flex-wrap: wrap; }
   [data-hero-rest] { grid-area: auto !important; order: 4; }
   [data-hero-glow] { display: none !important; }
-  [data-hero-media] > img { margin: -30px auto 0 !important; max-width: 100% !important; transform: none !important; }
+  /* Le portrait est agrandi par transformation : la mise en page n'en dépend
+     pas, la grille ne peut donc pas redéborder. Le décalage recentre le
+     docteur, qui n'est pas au milieu de son cadre. */
+  [data-hero-media] > img { margin: -30px auto 0 !important; max-width: 100% !important; transform: translateX(-8%) scale(1.32) !important; }
   [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
   [data-social-wrap] { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: -18px; }
   [data-social-wrap] { grid-template-rows: auto auto auto; }
