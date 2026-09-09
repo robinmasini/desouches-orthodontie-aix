@@ -181,7 +181,7 @@ APPEL = bande(
     '<div data-reveler><p class="sur-titre">Prendre rendez-vous</p>'
     '<h2>Deux façons de commencer.</h2></div>'
     '<div class="appel__voies" data-reveler data-reveler-delai="1">'
-    '<a class="voie" href="rendez-vous.html"><h3>Je veux consulter au cabinet</h3>'
+    '<a class="voie" href="#coordonnees"><h3>Je veux consulter au cabinet</h3>'
     '<p>Première consultation, bilan orthodontique, examen clinique. Pour un enfant, '
     'un adolescent ou un adulte.</p>'
     '<span class="btn btn--primaire">Prendre rendez-vous%s</span></a>'
@@ -248,7 +248,7 @@ GABARIT = """<!DOCTYPE html>
     <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
     <p class="modale__texte">L’évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
     <div class="modale__actions">
-      <a class="btn btn--primaire" href="rendez-vous.html">Prendre rendez-vous</a>
+      <a class="btn btn--primaire" href="#coordonnees">Prendre rendez-vous</a>
       <a class="modale__lien" href="ortho-mind.html">En savoir plus sur OrthoMind &rarr;</a>
     </div>
   </div>
@@ -303,7 +303,7 @@ def page(slug, title, description, h1, chapo, corps, fil, rubrique="", actions=N
     PAGES.append(dict(slug=slug, title=title, description=description, h1=h1, chapo=chapo,
                       corps=corps, fil=fil, rubrique=rubrique,
                       actions=actions if actions is not None else boutons(
-                          btn("Prendre rendez-vous", "rendez-vous.html", "primaire", True),
+                          btn("Prendre rendez-vous", "#coordonnees", "primaire", True),
                           btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html")),
                       schema=schema or schema_page(h1, slug, description)))
 
@@ -412,7 +412,7 @@ page(
           '</div><div data-reveler data-reveler-delai="1">' + faq(faq_aligneurs) + '</div></div>',
           variante="verre"),
     "Aligneurs transparents", RUB_ALIGNEURS,
-    actions=boutons(btn("Savoir si les aligneurs sont adaptés à mon cas", "rendez-vous.html", "primaire", True),
+    actions=boutons(btn("Savoir si les aligneurs sont adaptés à mon cas", "#coordonnees", "primaire", True),
                     btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html")),
     schema=schema_faq(faq_aligneurs))
 
@@ -714,13 +714,13 @@ page(
         'et de l’évolution de la dentition, avec un rendez-vous de contrôle programmé. Consulter à cet âge sert '
         'd’abord à ne pas passer à côté des rares situations où le moment d’agir ne se représentera pas.</p>'
         '</div>' +
-        boutons(btn("Prendre rendez-vous pour un premier bilan", "rendez-vous.html", "primaire", True)) +
+        boutons(btn("Prendre rendez-vous pour un premier bilan", "#coordonnees", "primaire", True)) +
         '</div>', variante="marine") +
     bande('<div class="duo"><div data-reveler>' +
           titre_bloc("Questions de parents", "Ce que l’on nous demande le plus souvent.") +
           '</div><div data-reveler data-reveler-delai="1">' + faq(faq_bilan) + '</div></div>'),
     "Bilan 6–7 ans", RUB_ENFANTS,
-    actions=boutons(btn("Prendre rendez-vous pour un premier bilan", "rendez-vous.html", "primaire", True)),
+    actions=boutons(btn("Prendre rendez-vous pour un premier bilan", "#coordonnees", "primaire", True)),
     schema=schema_faq(faq_bilan))
 
 # ---- PAGE 10 : Adolescent ---------------------------------------------------
@@ -858,7 +858,7 @@ page(
     "La demande la plus fréquente au cabinet : corriger ce qui gêne, sans que cela se voie et sans mettre sa vie professionnelle entre parenthèses.",
     bande('<div class="duo"><div data-reveler>' +
           titre_bloc("Vos questions", "Répondues sans détour.") +
-          boutons(btn("Prendre rendez-vous", "rendez-vous.html", "primaire", True)) +
+          boutons(btn("Prendre rendez-vous", "#coordonnees", "primaire", True)) +
           '</div><div data-reveler data-reveler-delai="1">' + faq(faq_adulte) + '</div></div>') +
     bande(duo(
         titre_bloc("Ce que l’on corrige le plus", "Chez l’adulte, en pratique."),
@@ -912,10 +912,10 @@ page(
           '<h2>Prêt à commencer ?</h2>'
           '<p class="chapo" style="margin-top:1.2rem">L’analyse est gratuite et sans engagement. '
           'Si un bilan s’avère pertinent, nous vous le dirons — et si ce n’est pas le cas, nous vous le dirons aussi.</p>' +
-          boutons(btn("Démarrer mon Évaluation Orthodontique", "rendez-vous.html", "primaire", True),
-                  btn("Prendre rendez-vous au cabinet", "rendez-vous.html")) + '</div>'),
+          boutons(btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html", "primaire", True),
+                  btn("Prendre rendez-vous au cabinet", "#coordonnees")) + '</div>'),
     "Ortho Mind",
-    actions=boutons(btn("Démarrer mon Évaluation Orthodontique", "rendez-vous.html", "primaire", True)))
+    actions=boutons(btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html", "primaire", True)))
 
 # ---- PAGE 15 : Avant / après ------------------------------------------------
 CAS = [
@@ -1026,7 +1026,7 @@ page(
           prose("<p>Reconnaître sa situation dans cette liste est utile pour comprendre. Cela ne dit ni la cause, "
                 "ni la sévérité, ni le bon moment pour agir — trois éléments qui déterminent pourtant entièrement "
                 "le traitement. C’est l’objet du bilan.</p>" +
-                boutons(btn("Prendre rendez-vous pour un bilan", "rendez-vous.html", "primaire", True),
+                boutons(btn("Prendre rendez-vous pour un bilan", "#coordonnees", "primaire", True),
                         btn("Voir des résultats", "avant-apres.html"))) + '</div>', variante="verre"),
     "Problèmes orthodontiques")
 

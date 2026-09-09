@@ -879,3 +879,16 @@ h1,h2{font-weight:700}
 @media (prefers-reduced-motion:reduce){
   .modale__voile,.modale__carte{animation:none!important}
 }
+
+/* ===== 21. Coordonnées du pied de page ====================================
+   Cible de défilement des CTA « Prendre rendez-vous » : ils n'ouvrent plus
+   rendez-vous.html, ils amènent ici, sur la même page. */
+.pied__coord{font-style:normal;display:grid;gap:.55rem;margin-top:1.5rem;font-size:.875rem;line-height:1.55;scroll-margin-top:calc(var(--entete-h) + 1.5rem)}
+.pied__coord-adresse{color:#fff}
+.pied__coord-tel{color:#fff;font-family:var(--f-display);font-size:1.35rem;letter-spacing:.01em}
+.pied__coord-horaires{color:rgba(255,255,255,.55)}
+.pied__coord-btn{margin-top:.7rem;justify-self:start}
+/* Le pied est marine : le bouton principal y passe en clair, comme dans
+   .bande--marine. Sans ça il serait marine sur marine, donc invisible. */
+.pied .btn--primaire{--fond:var(--verre);--texte:var(--marine);--bord:var(--verre)}
+.pied .btn--primaire:hover{--fond:var(--porcelaine);--bord:var(--porcelaine);color:var(--marine)}
