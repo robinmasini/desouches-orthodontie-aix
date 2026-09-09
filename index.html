@@ -104,6 +104,13 @@
      DOM qui tranche, et le robot vient après. On remonte donc les boutons. */
   [data-rdv-boutons] { position: relative; z-index: 3; }
 
+  /* Cartes Instagram et TikTok : « @dr.renauddesouches » mesure 129 px pour une
+     boîte de 82 à côté de l'icône, et débordait donc de la carte. L'icône passe
+     au-dessus : le pseudo dispose alors de toute la largeur de la carte. */
+  [data-social-tete] { flex-direction: column; align-items: flex-start !important; gap: 8px !important; }
+  [data-social-tete] > div:last-child { min-width: 0; max-width: 100%; }
+
+
 
 
   [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
@@ -326,7 +333,7 @@
         </div>
         <!-- Instagram card -->
         <div data-social="" style="position: absolute; z-index: 4; right: clamp(-30px, calc(1288px - 100vw), 0px); bottom: 11%; width: 244px; padding: 16px 18px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.86), rgba(255,255,255,.5)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 24px 60px -24px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 6.5s ease-in-out infinite;">
-          <div style="display: flex; align-items: center; gap: 12px;">
+          <div data-social-tete style="display: flex; align-items: center; gap: 12px;">
             <img src="assets/img/instagram.webp" alt="Instagram" style="width: 36px; height: 36px; flex: none; object-fit: contain;" />
             <div style="min-width: 0;">
               <div style="font-size: 14.5px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap;">@dr.renauddesouches</div>
@@ -344,7 +351,7 @@
 
         <!-- TikTok card -->
         <div data-social="" style="position: absolute; z-index: 4; right: clamp(-54px, calc(1288px - 100vw), 0px); top: 13%; width: 244px; padding: 16px 18px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.84), rgba(255,255,255,.48)); backdrop-filter: blur(var(--glass, 28px)) saturate(200%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(200%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 24px 60px -24px rgba(10,31,60,.45), inset 0 1px 0 rgba(255,255,255,1); animation: floaty 7.5s ease-in-out infinite; animation-delay: -2s;">
-          <div style="display: flex; align-items: center; gap: 12px;">
+          <div data-social-tete style="display: flex; align-items: center; gap: 12px;">
             <img src="assets/img/tiktok.webp" alt="TikTok" style="width: 36px; height: 36px; flex: none; object-fit: contain;" />
             <div style="min-width: 0;">
               <div style="font-size: 14.5px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap;">@dr.renauddesouches</div>
