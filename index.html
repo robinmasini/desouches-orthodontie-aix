@@ -70,9 +70,13 @@
   [data-hero] { display: flex !important; flex-direction: column !important; }
   [data-hero-text] { grid-area: auto !important; order: 1; }
   [data-hero-media] { grid-area: auto !important; order: 2; min-height: 0 !important; margin-top: 8px; }
-  [data-hero-stats] { grid-area: auto !important; order: 3; position: relative; z-index: 5; margin-top: 34px !important; gap: 18px !important; flex-wrap: wrap; }
+  [data-hero-stats] { grid-area: auto !important; order: 3; position: relative; z-index: 5; margin-top: 64px !important; gap: 18px !important; flex-wrap: wrap; }
   [data-hero-rest] { grid-area: auto !important; order: 4; }
   [data-hero-glow] { display: none !important; }
+  /* La parallaxe pousse [data-hero-media] jusqu'à 91 px vers le bas au
+     défilement ; les cartes sociales qu'il contient viennent alors
+     chevaucher les chiffres. Pas la place pour cette dérive sur téléphone. */
+  [data-hero-media] { animation: none !important; transform: none !important; }
   /* Le portrait est agrandi par transformation : la mise en page n'en dépend
      pas, la grille ne peut donc pas redéborder. Le décalage recentre le
      docteur, qui n'est pas au milieu de son cadre. */
