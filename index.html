@@ -79,10 +79,16 @@
      défilement ; les cartes sociales qu'il contient viennent alors
      chevaucher les chiffres. Pas la place pour cette dérive sur téléphone. */
   [data-hero-media] { animation: none !important; transform: none !important; }
-  /* Le portrait est agrandi par transformation : la mise en page n'en dépend
-     pas, la grille ne peut donc pas redéborder. Le décalage recentre le
-     docteur, qui n'est pas au milieu de son cadre. */
-  [data-hero-media] > img { margin: -30px auto 0 !important; max-width: 100% !important; transform: translateX(-8%) scale(1.32) !important; }
+  /* Le portrait sort du flux pour se placer à droite du titre, au premier
+     plan. Le conteneur repasse en statique pour que l'image se cale sur
+     [data-hero] et non sur lui ; les cartes sociales, elles, restent en flux. */
+  [data-hero-media] { position: static !important; }
+  [data-hero-media] > img {
+    position: absolute !important; top: 40px; right: -20%;
+    width: 80% !important; max-width: none !important;
+    margin: 0 !important; transform: none !important; z-index: 20 !important;
+  }
+  [data-hero-text] { position: relative; z-index: 1; }
   [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
   [data-social-wrap] { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: -18px; }
   [data-social-wrap] { grid-template-rows: auto auto auto; }
