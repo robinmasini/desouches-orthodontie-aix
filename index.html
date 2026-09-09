@@ -23,7 +23,9 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FBFCFD; -webkit-font-smoothing: antialiased; }
+  /* Sans cette déclaration, tout élément qui ne fixe pas sa police retombe
+     sur le serif par défaut du navigateur. Même pile que --f-texte de site.css. */
+  body { margin: 0; background: #FBFCFD; -webkit-font-smoothing: antialiased; font-family: 'Barlow', system-ui, 'Helvetica Neue', Arial, sans-serif; }
   a { color: #0A1F3C; text-decoration: none; }
   a:hover { color: #2E63A8; }
   summary { list-style: none; cursor: pointer; }
