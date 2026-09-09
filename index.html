@@ -89,6 +89,12 @@
     margin: 0 !important; transform: none !important; z-index: 20 !important;
   }
   [data-hero-text] { position: relative; z-index: 1; }
+  /* Section 04 : les cartes adresse et horaires font 291 px de haut pour une
+     photo de 163 px sur téléphone. Ancrées en bas de la photo, elles la
+     débordaient par le haut, masquaient le siège et le libellé « 04 ».
+     Elles repassent donc simplement sous la photo. */
+  [data-cabinet-cartes] { position: static !important; margin-top: 14px; }
+
   [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
   [data-social-wrap] { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: -18px; }
   [data-social-wrap] { grid-template-rows: auto auto auto; }
@@ -520,7 +526,7 @@
       </div>
       <div style="position: relative; margin-top: 28px;">
         <img src="assets/img/cabinet-2.webp" alt="Le cabinet du Dr Desouches à Aix-en-Provence" style="display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: 50% 78%; border-radius: 10px; box-shadow: 0 44px 100px -50px rgba(10,31,60,.55); animation: zoomOut 1s linear both; animation-timeline: view(); animation-range: cover 0% cover 100%;" />
-        <div style="position: absolute; left: 26px; bottom: 26px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <div data-cabinet-cartes style="position: absolute; left: 26px; bottom: 26px; display: flex; flex-wrap: wrap; gap: 14px;">
           <div style="min-width: 236px; padding: 20px 22px; border-radius: 8px; background: linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px top 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px top 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) left 9px bottom 14px / 11px 1px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 14px bottom 9px / 1px 11px no-repeat, linear-gradient(rgba(46,99,168,.55), rgba(46,99,168,.55)) right 9px bottom 14px / 11px 1px no-repeat, linear-gradient(140deg, rgba(255,255,255,.88), rgba(255,255,255,.55)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 30px 70px -28px rgba(10,31,60,.5), inset 0 1px 0 rgba(255,255,255,1);">
             <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6B7C96;">Adresse</div>
             <div style="margin-top: 8px; font-size: 15.5px; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em;">1422 route de Galice<br />13090 Aix‑en‑Provence</div>
