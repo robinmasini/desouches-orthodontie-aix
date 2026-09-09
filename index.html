@@ -129,6 +129,41 @@
 
 
 
+
+  /* ===== Menu hamburger de la barre du haut (sous 980 px) =====
+     Logo et CTA occupent à eux seuls la largeur disponible : les cinq
+     entrées ne peuvent pas y tenir en ligne. */
+  [data-nav-burger] { display: none; }
+  @media (max-width: 980px) {
+    [data-nav-barre] { gap: 10px !important; padding: 10px 10px 10px 16px !important; overflow: visible !important; }
+    [data-nav-logo] span { font-size: 18px !important; }
+    [data-nav-cta] { padding: 11px 14px !important; font-size: 12.5px !important; gap: 6px !important; }
+
+    [data-nav-liens] { display: none !important; }
+    [data-nav-liens][data-ouvert] {
+      display: flex !important; position: absolute; top: calc(100% + 10px); left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0 !important;
+      padding: 8px; border-radius: 18px;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255,255,255,.95);
+      box-shadow: 0 26px 60px -24px rgba(10,31,60,.5);
+    }
+    [data-nav-liens][data-ouvert] > a { padding: 13px 14px; border-radius: 12px; font-size: 15px; }
+    [data-nav-liens][data-ouvert] > a:hover { background: rgba(10,31,60,.05); }
+
+    [data-nav-burger] {
+      display: grid; place-items: center; flex: none; width: 38px; height: 38px;
+      margin-left: 4px; padding: 0; border: 1px solid rgba(255,255,255,.92);
+      border-radius: 999px; background: rgba(255,255,255,.62); color: #14304F; cursor: pointer;
+    }
+    [data-nav-burger] span { display: block; width: 17px; height: 1.5px; background: currentColor; border-radius: 2px; transition: transform .22s ease, opacity .22s ease; }
+    [data-nav-burger] span + span { margin-top: 4px; }
+    [data-nav-burger][aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+    [data-nav-burger][aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    [data-nav-burger][aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+  }
+
   .modale[hidden] { display: none; }  /* display:grid écraserait sinon l'attribut hidden */
   .modale__voile { position: absolute; inset: 0; background: rgba(10, 31, 60, .55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: fadeIn .22s ease both; }
   .modale__carte { position: relative; width: min(100%, 440px); padding: 40px 34px 32px; text-align: center; background: #fff; border-radius: 26px; box-shadow: 0 40px 90px -30px rgba(10, 31, 60, .6), inset 0 1px 0 rgba(255, 255, 255, .9); animation: riseSm .26s cubic-bezier(.2, .7, .3, 1) both; }
@@ -171,21 +206,22 @@
 
   <!-- ===== NAV ===== -->
   <div style="position: fixed; top: 22px; left: 0; right: 0; z-index: 80; display: flex; justify-content: center; padding: 0 24px;">
-    <div style="position: relative; width: 100%; max-width: 1240px; display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); padding: 12px 12px 12px 26px; overflow: hidden; background: linear-gradient(140deg, rgba(255,255,255,.80), rgba(255,255,255,.52)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 20px 50px -24px rgba(10,31,60,.30), inset 0 1px 0 rgba(255,255,255,.95);">
-      <a href="#top" style="display: flex; align-items: baseline; gap: 10px; margin-right: auto; flex: none; white-space: nowrap;">
+    <div data-nav-barre style="position: relative; width: 100%; max-width: 1240px; display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); padding: 12px 12px 12px 26px; overflow: hidden; background: linear-gradient(140deg, rgba(255,255,255,.80), rgba(255,255,255,.52)); backdrop-filter: blur(var(--glass, 28px)) saturate(190%); -webkit-backdrop-filter: blur(var(--glass, 28px)) saturate(190%); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 20px 50px -24px rgba(10,31,60,.30), inset 0 1px 0 rgba(255,255,255,.95);">
+      <a href="#top" data-nav-logo style="display: flex; align-items: baseline; gap: 10px; margin-right: auto; flex: none; white-space: nowrap;">
         <span style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 25px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; flex: none;">Dr. DESOUCHES</span>
       </a>
-      <div style="display: flex; align-items: center; gap: clamp(13px, 1.7vw, 26px); flex: none; white-space: nowrap; font-size: 13.5px; font-weight: 500; color: #33455F;">
+      <div data-nav-liens id="nav-liens" style="display: flex; align-items: center; gap: clamp(13px, 1.7vw, 26px); flex: none; white-space: nowrap; font-size: 13.5px; font-weight: 500; color: #33455F;">
         <a href="#orthomind" style="color: inherit;">OrthoMind</a>
         <a href="#traitements" style="color: inherit;">Traitements</a>
         <a href="#equipe" style="color: inherit;">L'équipe</a>
         <a href="#cabinet" style="color: inherit;">Le cabinet</a>
         <a href="#rdv" style="color: inherit;">Rendez‑vous</a>
       </div>
-      <a href="#orthomind" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; padding: 14px 24px; border-radius: 999px; background: linear-gradient(160deg, #2E63A8, #24518C); color: #fff; font-size: 13.5px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 16px 34px -16px rgba(10,31,60,.6), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="box-shadow: 0 22px 42px -14px rgba(10,31,60,.72), inset 0 1px 0 rgba(255,255,255,.3); transform: translateY(-1px);">
+      <a href="#orthomind" data-nav-cta style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; padding: 14px 24px; border-radius: 999px; background: linear-gradient(160deg, #2E63A8, #24518C); color: #fff; font-size: 13.5px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 16px 34px -16px rgba(10,31,60,.6), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="box-shadow: 0 22px 42px -14px rgba(10,31,60,.72), inset 0 1px 0 rgba(255,255,255,.3); transform: translateY(-1px);">
         <span style="color: #fff;">Ma téléconsultation</span>
         <span style="width: 6px; height: 6px; border-radius: 999px; background: #7FA6D9; box-shadow: 0 0 10px #7FA6D9;"></span>
       </a>
+      <button type="button" data-nav-burger aria-expanded="false" aria-controls="nav-liens" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 
@@ -716,6 +752,35 @@
     if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
     else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
   });
+})();
+</script>
+<script>
+/* Menu hamburger, sous 980 px. Les entrées étant des ancres de la même page,
+   le panneau se referme dès qu'on en choisit une. */
+(function () {
+  var bouton = document.querySelector('[data-nav-burger]');
+  var panneau = document.getElementById('nav-liens');
+  if (!bouton || !panneau) return;
+
+  function fermer() {
+    panneau.removeAttribute('data-ouvert');
+    bouton.setAttribute('aria-expanded', 'false');
+    bouton.setAttribute('aria-label', 'Ouvrir le menu');
+  }
+  function basculer() {
+    if (panneau.hasAttribute('data-ouvert')) return fermer();
+    panneau.setAttribute('data-ouvert', '');
+    bouton.setAttribute('aria-expanded', 'true');
+    bouton.setAttribute('aria-label', 'Fermer le menu');
+  }
+
+  bouton.addEventListener('click', function (e) { e.stopPropagation(); basculer(); });
+  panneau.addEventListener('click', function (e) { if (e.target.tagName === 'A') fermer(); });
+  document.addEventListener('click', function (e) {
+    if (panneau.hasAttribute('data-ouvert') && !panneau.contains(e.target)) fermer();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fermer(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 980) fermer(); });
 })();
 </script>
 </body>
