@@ -95,6 +95,12 @@
      Elles repassent donc simplement sous la photo. */
   [data-cabinet-cartes] { position: static !important; margin-top: 14px; }
 
+  /* Section 05 : « Démarrer mon Évaluation Orthodontique » fait 358 px pour un
+     cadre de 327 et sortait donc du panneau bleu. Sur téléphone le libellé
+     passe à la ligne au lieu d'être tenu sur une seule. */
+  #rdv a { white-space: normal !important; text-align: center; }
+
+
   [data-hero-stats] > div > div:first-child { font-size: 30px !important; }
   [data-social-wrap] { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: -18px; }
   [data-social-wrap] { grid-template-rows: auto auto auto; }
