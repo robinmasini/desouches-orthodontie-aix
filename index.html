@@ -111,6 +111,14 @@
   [data-social-tete] { flex-direction: column; align-items: flex-start !important; gap: 8px !important; }
   [data-social-tete] > div:last-child { min-width: 0; max-width: 100%; }
 
+  /* Les quatre CTA du hero calaient tous à gauche sur 24 px mais s'arrêtaient
+     à des largeurs différentes à droite, d'où une colonne en dents de scie.
+     Sur téléphone ils prennent la largeur du bloc de texte : mêmes marges des
+     deux côtés. L'intercalaire de saut de ligne devient inutile. */
+  [data-hero-cta] > a { width: 100%; justify-content: flex-start; }
+  [data-hero-cta] > div[aria-hidden="true"] { display: none; }
+
+
 
 
 
@@ -270,7 +278,7 @@
           Cabinet d'orthodontie &amp; production de gouttières à Aix‑en‑Provence. Aligneurs transparents, appareils esthétiques et suivi numérique continu&nbsp;— pour les adultes exigeants comme pour les sourires qui grandissent.
         </p>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .16s;">
+        <div data-hero-cta style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; animation: rise 1s cubic-bezier(.16,1,.3,1) both; animation-delay: .16s;">
           <a data-eval href="#orthomind" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; padding: 19px 30px; border-radius: 999px; background: linear-gradient(160deg, #2E63A8, #24518C); color: #fff; font-size: 15px; font-weight: 600; box-shadow: 0 26px 50px -22px rgba(10,31,60,.75), inset 0 1px 0 rgba(255,255,255,.22);" style-hover="transform: translateY(-2px); box-shadow: 0 32px 60px -20px rgba(10,31,60,.85), inset 0 1px 0 rgba(255,255,255,.3);">
             <span style="color: #fff;">Démarrer mon Évaluation Orthodontique</span>
             <span style="color: rgba(255,255,255,.55); font-size: 18px; line-height: 1;">→</span>
