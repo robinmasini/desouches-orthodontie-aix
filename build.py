@@ -88,7 +88,7 @@ VISUELS = {
         "Poste de travail équipé d’un écran et d’un scanner intra-oral",
         "L’empreinte optique remplace les pâtes à empreinte.",
         "3/2", "", "verre"),
-    "ortho-mind.html": ("orthomind-lockup.webp",
+    "ortho-mind.html": ("orthopower-lockup.webp",
         "Logotype OrthoPower",
         None, "5/2", "logo", "verre"),
     "casper-dental.html": ("casper.webp",
@@ -244,7 +244,7 @@ GABARIT = """<!DOCTYPE html>
   <div class="modale__voile" data-fermer></div>
   <div class="modale__carte">
     <button class="modale__fermer" type="button" data-fermer aria-label="Fermer">&times;</button>
-    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoPower" width="315" height="444" loading="lazy" decoding="async">
+    <img class="modale__logo" src="assets/img/orthopower-lockup.webp" alt="OrthoPower" width="315" height="444" loading="lazy" decoding="async">
     <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
     <p class="modale__texte">L’évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
     <div class="modale__actions">
