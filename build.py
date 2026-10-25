@@ -89,7 +89,7 @@ VISUELS = {
         "L’empreinte optique remplace les pâtes à empreinte.",
         "3/2", "", "verre"),
     "ortho-mind.html": ("orthomind-lockup.webp",
-        "Logotype OrthoMind",
+        "Logotype OrthoPower",
         None, "5/2", "logo", "verre"),
     "casper-dental.html": ("casper.webp",
         "Logotype Casper Dental",
@@ -244,7 +244,7 @@ GABARIT = """<!DOCTYPE html>
   <div class="modale__voile" data-fermer></div>
   <div class="modale__carte">
     <button class="modale__fermer" type="button" data-fermer aria-label="Fermer">&times;</button>
-    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoMind" width="315" height="444" loading="lazy" decoding="async">
+    <img class="modale__logo" src="assets/img/orthomind-lockup.webp" alt="OrthoPower" width="315" height="444" loading="lazy" decoding="async">
     <h2 class="modale__titre" id="modale-eval-titre">Bientôt disponible</h2>
     <p class="modale__texte">L’évaluation orthodontique en ligne est en cours de finalisation. En attendant, le cabinet reste joignable pour un premier avis.</p>
     <div class="modale__actions">
@@ -871,18 +871,18 @@ page(
                      btn("Orthodontie adulte", "orthodontie-adulte.html"))), modif="inverse"), variante="verre"),
     "Aligneurs chez l’adulte", RUB_ADULTES, schema=schema_faq(faq_adulte))
 
-# ---- PAGE 14 : Ortho Mind ---------------------------------------------------
+# ---- PAGE 14 : Ortho Power ---------------------------------------------------
 page(
     "ortho-mind.html",
-    "Ortho Mind — Analysez votre sourire | Aix-en-Provence",
-    "Ortho Mind : une première analyse de votre sourire à partir de photos, vérifiée selon le protocole défini par le Dr Desouches, à Aix-en-Provence.",
-    "Analysez votre sourire en ligne avec Ortho Mind",
+    "Ortho Power — Analysez votre sourire | Aix-en-Provence",
+    "Ortho Power : une première analyse de votre sourire à partir de photos, vérifiée selon le protocole défini par le Dr Desouches, à Aix-en-Provence.",
+    "Analysez votre sourire en ligne avec Ortho Power",
     "Quelques photos prises avec votre téléphone, une première lecture des éléments orthodontiques visibles, et une orientation avant même de vous déplacer.",
     bande(duo(
         titre_bloc("Le parcours", "Cinq étapes, une dizaine de minutes."),
         sequence([
             ("Je prends mes photos", "Face, sourire, profil et vues des arcades, en suivant les repères affichés."),
-            ("Ortho Mind analyse mon sourire", "Les images sont traitées pour en extraire les éléments observables."),
+            ("Ortho Power analyse mon sourire", "Les images sont traitées pour en extraire les éléments observables."),
             ("Les principaux éléments sont identifiés", "Encombrement, espaces, décalages, recouvrement : ce qui se voit sur des photos."),
             ("L’analyse est vérifiée", "La lecture s’effectue dans le cadre du protocole défini par le Dr Desouches."),
             ("Je reçois une première orientation", "Une réponse claire sur la pertinence d’un bilan et sur les options envisageables."),
@@ -890,7 +890,7 @@ page(
     bande(duo(
         titre_bloc("Ce que c’est — et ce que ce n’est pas", "Une orientation, pas un diagnostic."),
         prose(
-            "<p>Ortho Mind répond à une question simple : « est-ce que ma situation relève de l’orthodontie, et à "
+            "<p>Ortho Power répond à une question simple : « est-ce que ma situation relève de l’orthodontie, et à "
             "quoi ressemblerait la suite ? » C’est utile pour décider de prendre rendez-vous, ou pour comprendre "
             "ce qui vous gêne sans encore vous engager.</p>"
             "<p>Ce n’est pas un diagnostic. Un diagnostic orthodontique s’appuie sur un examen clinique, des "
@@ -913,7 +913,7 @@ page(
           'Si un bilan s’avère pertinent, nous vous le dirons — et si ce n’est pas le cas, nous vous le dirons aussi.</p>' +
           boutons(btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html", "primaire", True),
                   btn("Prendre rendez-vous au cabinet", "#coordonnees")) + '</div>'),
-    "Ortho Mind",
+    "Ortho Power",
     actions=boutons(btn("Démarrer mon Évaluation Orthodontique", "ortho-mind.html", "primaire", True)))
 
 # ---- PAGE 15 : Avant / après ------------------------------------------------
@@ -1052,7 +1052,7 @@ page(
               "<h3>Deux prolongements</h3>"
               "<p>Cette expertise a donné naissance à <a class=\"lien-souligne\" href=\"casper-dental.html\">Casper "
               "Dental</a>, destiné aux orthodontistes et chirurgiens-dentistes, et à l’usage de "
-              "<a class=\"lien-souligne\" href=\"ortho-mind.html\">Ortho Mind</a> pour la première analyse du "
+              "<a class=\"lien-souligne\" href=\"ortho-mind.html\">Ortho Power</a> pour la première analyse du "
               "sourire des patients.</p>" +
               avis("Parcours détaillé, diplômes, titres et activités professionnelles : cette section sera "
                    "complétée avec les éléments fournis par le cabinet, dans le respect des règles déontologiques "
@@ -1121,7 +1121,7 @@ page(
 page(
     "technologie.html",
     "Technologie et orthodontie numérique | Dr Desouches, Aix-en-Provence",
-    "Scanner intra-oral, empreintes numériques, planification et simulation 3D, fabrication numérique, Dental Monitoring et Ortho Mind, à Aix-en-Provence.",
+    "Scanner intra-oral, empreintes numériques, planification et simulation 3D, fabrication numérique, Dental Monitoring et Ortho Power, à Aix-en-Provence.",
     "Technologie et orthodontie numérique",
     "Ce que nous utilisons, et à quoi cela sert précisément. Sans emballement, parce qu’un outil n’a de valeur que par ce qu’il permet de mieux faire.",
     bande('<div class="duo" style="align-items:start"><div data-reveler>' +
@@ -1141,7 +1141,7 @@ page(
               "<h3>Fabrication numérique</h3><p>La production des aligneurs à partir des modèles validés, avec un "
               "contrôle des pièces avant remise.</p>"
               "<h3>Dental Monitoring</h3><p>Le suivi entre les rendez-vous, à partir de scans réalisés au smartphone.</p>"
-              "<h3>Ortho Mind</h3><p>La première analyse du sourire à partir de photographies, en amont du bilan.</p>"
+              "<h3>Ortho Power</h3><p>La première analyse du sourire à partir de photographies, en amont du bilan.</p>"
               "<h3>Intelligence artificielle</h3><p>Elle intervient dans l’analyse d’images : détecter, mesurer, comparer. "
               "Elle ne pose pas de diagnostic et ne décide d’aucun traitement. Ces décisions relèvent de l’orthodontiste.</p>") +
           '</div></div>') +
@@ -1256,9 +1256,9 @@ FAQ_THEMES = [
         ("Cela remplace-t-il les rendez-vous ?",
          "Non. Le suivi connecté complète les consultations et permet de réagir plus tôt entre deux visites."),
     ]),
-    ("Ortho Mind", [
+    ("Ortho Power", [
         ("Est-ce un diagnostic ?",
-         "Non. Ortho Mind fournit une première orientation à partir de photographies. Un diagnostic nécessite un examen clinique et des radiographies."),
+         "Non. Ortho Power fournit une première orientation à partir de photographies. Un diagnostic nécessite un examen clinique et des radiographies."),
         ("Mes photos sont-elles protégées ?",
          "Ce sont des données de santé, traitées dans le cadre prévu par la réglementation applicable et conservées de manière sécurisée."),
     ]),
@@ -1342,7 +1342,7 @@ page(
 page(
     "rendez-vous.html",
     "Prendre rendez-vous — Orthodontiste à Aix-en-Provence | Dr Desouches",
-    "Prendre rendez-vous au cabinet d’orthodontie du Dr Renaud Desouches à Aix-en-Provence, ou commencer par une analyse en ligne de votre sourire avec Ortho Mind.",
+    "Prendre rendez-vous au cabinet d’orthodontie du Dr Renaud Desouches à Aix-en-Provence, ou commencer par une analyse en ligne de votre sourire avec Ortho Power.",
     "Prendre rendez-vous",
     "Deux entrées possibles, selon l’étape où vous en êtes. Les deux mènent au même endroit : une réponse claire sur votre situation.",
     bande('<div class="duo duo--egal"><div data-reveler>'
@@ -1381,7 +1381,7 @@ for slug, titre, chapo, blocs in [
     ("confidentialite.html", "Politique de confidentialité",
      "Comment les données personnelles collectées sur le site du Dr Renaud Desouches, orthodontiste à Aix-en-Provence, sont traitées, conservées et protégées.",
      [("Responsable de traitement", "À compléter."),
-      ("Données collectées", "Données transmises via les formulaires de contact et de prise de rendez-vous, données de connexion, et le cas échéant photographies transmises dans le cadre d’Ortho Mind."),
+      ("Données collectées", "Données transmises via les formulaires de contact et de prise de rendez-vous, données de connexion, et le cas échéant photographies transmises dans le cadre d’Ortho Power."),
       ("Finalités", "Répondre aux demandes, organiser les rendez-vous, assurer le suivi des patients."),
       ("Base légale", "Exécution de mesures précontractuelles, obligation légale liée au dossier médical, consentement pour les traitements facultatifs."),
       ("Durée de conservation", "Selon les durées légales applicables aux dossiers médicaux et aux données de contact."),
@@ -1394,7 +1394,7 @@ for slug, titre, chapo, blocs in [
       ("Contenus tiers", "Carte Google Maps, module de prise de rendez-vous, lecteurs vidéo : chargés uniquement après consentement."),
       ("Paramétrer vos choix", "Un module de gestion du consentement sera intégré avant la mise en ligne, permettant d’accepter, de refuser et de modifier vos choix à tout moment.")]),
     ("donnees-de-sante.html", "Données de santé",
-     "Le traitement des photographies et informations médicales transmises sur ce site, notamment via Ortho Mind : nature, hébergement, consentement et sécurité.",
+     "Le traitement des photographies et informations médicales transmises sur ce site, notamment via Ortho Power : nature, hébergement, consentement et sécurité.",
      [("Nature des données", "Les photographies intra-buccales et du visage, ainsi que les informations relatives à votre situation dentaire, constituent des données de santé au sens du RGPD."),
       ("Hébergement", "Ces données doivent être hébergées auprès d’un hébergeur certifié HDS. Références de l’hébergeur : à compléter."),
       ("Finalité", "Fournir une première orientation, préparer la consultation et, le cas échéant, alimenter votre dossier de patient."),
@@ -1420,7 +1420,7 @@ page("404.html",
            + prose("<p>Voici les pages les plus consultées :</p>"
                    + liste(['<a class="lien-souligne" href="aligneurs.html">Le traitement par aligneurs</a>',
                             '<a class="lien-souligne" href="bilan-6-7-ans.html">Le bilan de 6–7 ans</a>',
-                            '<a class="lien-souligne" href="ortho-mind.html">Ortho Mind</a>',
+                            '<a class="lien-souligne" href="ortho-mind.html">Ortho Power</a>',
                             '<a class="lien-souligne" href="cabinet-aix-en-provence.html">Le cabinet et son accès</a>',
                             '<a class="lien-souligne" href="faq.html">Les questions fréquentes</a>']))
            + '</div>'),
